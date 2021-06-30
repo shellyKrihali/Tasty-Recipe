@@ -32,6 +32,8 @@
 		83E9E7C8268C99EA00023D2F /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7C7268C99EA00023D2F /* Category.storyboard */; };
 		83E9E7CC268C9AA000023D2F /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7CA268C9AA000023D2F /* Favorites.storyboard */; };
 		83E9E7CF268C9C9000023D2F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7CE268C9C9000023D2F /* Profile.storyboard */; };
+		83E9E7D3268CC7CE00023D2F /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7D2268CC7CE00023D2F /* RecipeCell.swift */; };
+		83E9E7D5268CC7F700023D2F /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7D4268CC7F700023D2F /* RecipeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		83E9E7C7268C99EA00023D2F /* Category.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		83E9E7CB268C9AA000023D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Tasty-Recipe/Storyboard/Tasty-Recipe/Base.lproj/Favorites.storyboard"; sourceTree = "<group>"; };
 		83E9E7CE268C9C9000023D2F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		83E9E7D2268CC7CE00023D2F /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		83E9E7D4268CC7F700023D2F /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		834B43DA268B34C50080B4A7 /* Tasty-Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				83E9E7D1268CC76300023D2F /* Cells */,
 				83E9E7C2268C980A00023D2F /* Storyboard */,
 				834B43F2268B43F30080B4A7 /* Main */,
 				83E9E7C6268C995F00023D2F /* Home */,
@@ -188,6 +193,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		83E9E7D1268CC76300023D2F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				83E9E7D2268CC7CE00023D2F /* RecipeCell.swift */,
+				83E9E7D4268CC7F700023D2F /* RecipeCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +266,7 @@
 				834B43E8268B34C60080B4A7 /* LaunchScreen.storyboard in Resources */,
 				83E9E7CC268C9AA000023D2F /* Favorites.storyboard in Resources */,
 				83E9E7B1268C82AD00023D2F /* ic_arrow_back.png in Resources */,
+				83E9E7D5268CC7F700023D2F /* RecipeCell.xib in Resources */,
 				83E9E7C1268C95ED00023D2F /* TapBarMenu.storyboard in Resources */,
 				83E9E7C8268C99EA00023D2F /* Category.storyboard in Resources */,
 				834B43E3268B34C50080B4A7 /* Main.storyboard in Resources */,
@@ -266,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E9E7D3268CC7CE00023D2F /* RecipeCell.swift in Sources */,
 				83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */,
 				83E9E7BA268C904E00023D2F /* FavoritesTableViewController.swift in Sources */,
 				83E9E7B6268C8FA400023D2F /* HomeTableViewController.swift in Sources */,

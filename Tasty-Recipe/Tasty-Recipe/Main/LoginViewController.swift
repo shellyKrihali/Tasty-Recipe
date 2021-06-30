@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController , UITextFieldDelegate{
 
     //UI view properties
     @IBOutlet weak var emailTextField: UITextField!
@@ -36,3 +36,18 @@ class LoginViewController: UIViewController {
         return true
     }
 }
+    //textfield slides up
+    extension LoginViewController {
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            navigationController?.navigationBar.isHidden = true
+        }
+        func textFieldDidEndEditing(_ textField: UITextField) {
+        }
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            navigationController?.navigationBar.isHidden = false
+            textField.resignFirstResponder()
+            return true
+        }
+    }
+

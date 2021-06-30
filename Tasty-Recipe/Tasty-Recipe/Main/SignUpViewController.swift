@@ -7,8 +7,16 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController,UITextFieldDelegate {
 
+    
+   
+    @IBOutlet weak var nameTextField: CustomTextField!
+    
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    
+    @IBOutlet weak var emailTextField: CustomTextField!
+    
     //first loading func
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,4 +31,18 @@ class SignUpViewController: UIViewController {
         return true
     }
 
+}
+extension SignUpViewController {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        navigationController?.navigationBar.isHidden = false
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
