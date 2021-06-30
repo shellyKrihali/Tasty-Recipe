@@ -10,12 +10,28 @@
 		834B43DC268B34C50080B4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43DB268B34C50080B4A7 /* AppDelegate.swift */; };
 		834B43DE268B34C50080B4A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43DD268B34C50080B4A7 /* SceneDelegate.swift */; };
 		834B43E3268B34C50080B4A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834B43E1268B34C50080B4A7 /* Main.storyboard */; };
-		834B43E5268B34C60080B4A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834B43E4268B34C60080B4A7 /* Assets.xcassets */; };
 		834B43E8268B34C60080B4A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834B43E6268B34C60080B4A7 /* LaunchScreen.storyboard */; };
 		834B43F1268B3D830080B4A7 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F0268B3D830080B4A7 /* CustomColor.swift */; };
 		834B43F4268B44560080B4A7 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F3268B44560080B4A7 /* LoginSignUpViewController.swift */; };
 		834B43F6268B54F30080B4A7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F5268B54F30080B4A7 /* CustomButton.swift */; };
 		834B43F8268B5A2D0080B4A7 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F7268B5A2D0080B4A7 /* CustomLabel.swift */; };
+		83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329A8268C5DFD00F0846D /* LoginViewController.swift */; };
+		83E329AB268C668700F0846D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329AA268C668700F0846D /* CustomTextField.swift */; };
+		83E329AD268C68DA00F0846D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329AC268C68DA00F0846D /* SignUpViewController.swift */; };
+		83E9E7A6268C6F6000023D2F /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */; };
+		83E9E7AF268C7E4E00023D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7AE268C7E4E00023D2F /* Assets.xcassets */; };
+		83E9E7B1268C82AD00023D2F /* ic_arrow_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7B0268C82AD00023D2F /* ic_arrow_back.png */; };
+		83E9E7B4268C8C4D00023D2F /* flavor_icons in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7B3268C8C4D00023D2F /* flavor_icons */; };
+		83E9E7B6268C8FA400023D2F /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7B5268C8FA400023D2F /* HomeTableViewController.swift */; };
+		83E9E7B8268C8FF700023D2F /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7B7268C8FF700023D2F /* CategoryTableViewController.swift */; };
+		83E9E7BA268C904E00023D2F /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7B9268C904E00023D2F /* FavoritesTableViewController.swift */; };
+		83E9E7BC268C909100023D2F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7BB268C909100023D2F /* ProfileViewController.swift */; };
+		83E9E7BE268C92E600023D2F /* BigPicture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7BD268C92E600023D2F /* BigPicture.storyboard */; };
+		83E9E7C1268C95ED00023D2F /* TapBarMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7BF268C95ED00023D2F /* TapBarMenu.storyboard */; };
+		83E9E7C5268C986D00023D2F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7C3268C986D00023D2F /* Home.storyboard */; };
+		83E9E7C8268C99EA00023D2F /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7C7268C99EA00023D2F /* Category.storyboard */; };
+		83E9E7CC268C9AA000023D2F /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7CA268C9AA000023D2F /* Favorites.storyboard */; };
+		83E9E7CF268C9C9000023D2F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7CE268C9C9000023D2F /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +39,29 @@
 		834B43DB268B34C50080B4A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834B43DD268B34C50080B4A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		834B43E2268B34C50080B4A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		834B43E4268B34C60080B4A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		834B43E7268B34C60080B4A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		834B43E9268B34C60080B4A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		834B43F0268B3D830080B4A7 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		834B43F3268B44560080B4A7 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		834B43F5268B54F30080B4A7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		834B43F7268B5A2D0080B4A7 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		83E329A8268C5DFD00F0846D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		83E329AA268C668700F0846D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		83E329AC268C68DA00F0846D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		83E9E7AE268C7E4E00023D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83E9E7B0268C82AD00023D2F /* ic_arrow_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_back.png; sourceTree = "<group>"; };
+		83E9E7B3268C8C4D00023D2F /* flavor_icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flavor_icons; sourceTree = "<group>"; };
+		83E9E7B5268C8FA400023D2F /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		83E9E7B7268C8FF700023D2F /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		83E9E7B9268C904E00023D2F /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		83E9E7BB268C909100023D2F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		83E9E7BD268C92E600023D2F /* BigPicture.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BigPicture.storyboard; sourceTree = "<group>"; };
+		83E9E7C0268C95ED00023D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Tasty-Recipe/Base.lproj/TapBarMenu.storyboard"; sourceTree = "<group>"; };
+		83E9E7C4268C986D00023D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Tasty-Recipe/Storyboard/Tasty-Recipe/Base.lproj/Home.storyboard"; sourceTree = "<group>"; };
+		83E9E7C7268C99EA00023D2F /* Category.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
+		83E9E7CB268C9AA000023D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Tasty-Recipe/Storyboard/Tasty-Recipe/Base.lproj/Favorites.storyboard"; sourceTree = "<group>"; };
+		83E9E7CE268C9C9000023D2F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,14 +94,21 @@
 		834B43DA268B34C50080B4A7 /* Tasty-Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				834B43F2268B43F30080B4A7 /* View Controller */,
+				83E9E7C2268C980A00023D2F /* Storyboard */,
+				834B43F2268B43F30080B4A7 /* Main */,
+				83E9E7C6268C995F00023D2F /* Home */,
+				83E9E7C9268C9A5C00023D2F /* Category */,
+				83E9E7CD268C9C1A00023D2F /* Favorites */,
+				83E9E7D0268C9CF800023D2F /* Profile */,
 				834B43EF268B3D5D0080B4A7 /* Custom */,
+				83E9E7AE268C7E4E00023D2F /* Assets.xcassets */,
+				83E9E7B3268C8C4D00023D2F /* flavor_icons */,
 				834B43DB268B34C50080B4A7 /* AppDelegate.swift */,
 				834B43DD268B34C50080B4A7 /* SceneDelegate.swift */,
-				834B43E1268B34C50080B4A7 /* Main.storyboard */,
-				834B43E4268B34C60080B4A7 /* Assets.xcassets */,
+				83E9E7BD268C92E600023D2F /* BigPicture.storyboard */,
 				834B43E6268B34C60080B4A7 /* LaunchScreen.storyboard */,
 				834B43E9268B34C60080B4A7 /* Info.plist */,
+				83E9E7B2268C82F900023D2F /* Icons */,
 			);
 			path = "Tasty-Recipe";
 			sourceTree = "<group>";
@@ -80,16 +119,73 @@
 				834B43F0268B3D830080B4A7 /* CustomColor.swift */,
 				834B43F5268B54F30080B4A7 /* CustomButton.swift */,
 				834B43F7268B5A2D0080B4A7 /* CustomLabel.swift */,
+				83E329AA268C668700F0846D /* CustomTextField.swift */,
+				83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
 		};
-		834B43F2268B43F30080B4A7 /* View Controller */ = {
+		834B43F2268B43F30080B4A7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				834B43F3268B44560080B4A7 /* LoginSignUpViewController.swift */,
+				83E329A8268C5DFD00F0846D /* LoginViewController.swift */,
+				83E329AC268C68DA00F0846D /* SignUpViewController.swift */,
 			);
-			path = "View Controller";
+			path = Main;
+			sourceTree = "<group>";
+		};
+		83E9E7B2268C82F900023D2F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				83E9E7B0268C82AD00023D2F /* ic_arrow_back.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		83E9E7C2268C980A00023D2F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				834B43E1268B34C50080B4A7 /* Main.storyboard */,
+				83E9E7BF268C95ED00023D2F /* TapBarMenu.storyboard */,
+				83E9E7C3268C986D00023D2F /* Home.storyboard */,
+				83E9E7C7268C99EA00023D2F /* Category.storyboard */,
+				83E9E7CE268C9C9000023D2F /* Profile.storyboard */,
+				83E9E7CA268C9AA000023D2F /* Favorites.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		83E9E7C6268C995F00023D2F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				83E9E7B5268C8FA400023D2F /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		83E9E7C9268C9A5C00023D2F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				83E9E7B7268C8FF700023D2F /* CategoryTableViewController.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		83E9E7CD268C9C1A00023D2F /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				83E9E7B9268C904E00023D2F /* FavoritesTableViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		83E9E7D0268C9CF800023D2F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				83E9E7BB268C909100023D2F /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +245,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E9E7AF268C7E4E00023D2F /* Assets.xcassets in Resources */,
+				83E9E7CF268C9C9000023D2F /* Profile.storyboard in Resources */,
+				83E9E7B4268C8C4D00023D2F /* flavor_icons in Resources */,
+				83E9E7BE268C92E600023D2F /* BigPicture.storyboard in Resources */,
 				834B43E8268B34C60080B4A7 /* LaunchScreen.storyboard in Resources */,
-				834B43E5268B34C60080B4A7 /* Assets.xcassets in Resources */,
+				83E9E7CC268C9AA000023D2F /* Favorites.storyboard in Resources */,
+				83E9E7B1268C82AD00023D2F /* ic_arrow_back.png in Resources */,
+				83E9E7C1268C95ED00023D2F /* TapBarMenu.storyboard in Resources */,
+				83E9E7C8268C99EA00023D2F /* Category.storyboard in Resources */,
 				834B43E3268B34C50080B4A7 /* Main.storyboard in Resources */,
+				83E9E7C5268C986D00023D2F /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,12 +266,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */,
+				83E9E7BA268C904E00023D2F /* FavoritesTableViewController.swift in Sources */,
+				83E9E7B6268C8FA400023D2F /* HomeTableViewController.swift in Sources */,
 				834B43F4268B44560080B4A7 /* LoginSignUpViewController.swift in Sources */,
+				83E9E7BC268C909100023D2F /* ProfileViewController.swift in Sources */,
 				834B43F8268B5A2D0080B4A7 /* CustomLabel.swift in Sources */,
 				834B43DC268B34C50080B4A7 /* AppDelegate.swift in Sources */,
+				83E329AB268C668700F0846D /* CustomTextField.swift in Sources */,
 				834B43F1268B3D830080B4A7 /* CustomColor.swift in Sources */,
+				83E9E7A6268C6F6000023D2F /* CustomNavigationController.swift in Sources */,
+				83E329AD268C68DA00F0846D /* SignUpViewController.swift in Sources */,
 				834B43DE268B34C50080B4A7 /* SceneDelegate.swift in Sources */,
 				834B43F6268B54F30080B4A7 /* CustomButton.swift in Sources */,
+				83E9E7B8268C8FF700023D2F /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +300,30 @@
 				834B43E7268B34C60080B4A7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		83E9E7BF268C95ED00023D2F /* TapBarMenu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83E9E7C0268C95ED00023D2F /* Base */,
+			);
+			name = TapBarMenu.storyboard;
+			sourceTree = "<group>";
+		};
+		83E9E7C3268C986D00023D2F /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83E9E7C4268C986D00023D2F /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		83E9E7CA268C9AA000023D2F /* Favorites.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83E9E7CB268C9AA000023D2F /* Base */,
+			);
+			name = Favorites.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

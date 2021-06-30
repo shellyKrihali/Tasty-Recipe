@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jth-yS-0v9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--loginSignUpViewController-->
+        <scene sceneID="zZT-yf-5IL">
+            <objects>
+                <viewController title="loginSignUpViewController" id="a9b-Dq-fg8" customClass="LoginSignUpViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7mf-2I-caT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tasty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoM-bM-ZDg" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="147" y="256" width="176" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfP-Lk-DbC" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="439" width="344" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.59460764710000003" blue="0.07549967296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6u6-6K-xth" kind="show" id="ULO-C1-FnX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbZ-Pu-Z1l" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="116" y="518" width="298" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-wv-L9y" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="566" width="344" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" red="1" green="0.8084375291" blue="0.33766198190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wYN-aT-uUB" kind="show" id="uJE-jU-W8l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pec-7b-izm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tjc-Tj-7Au"/>
+                    <connections>
+                        <outlet property="TastyLabel" destination="BoM-bM-ZDg" id="bht-Hd-Bww"/>
+                        <outlet property="dontHaveAccountLabel" destination="qbZ-Pu-Z1l" id="4kR-bC-tUR"/>
+                        <outlet property="loginButton" destination="AfP-Lk-DbC" id="kVE-2y-BhG"/>
+                        <outlet property="signupButton" destination="eSf-wv-L9y" id="jTx-bC-GcF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ba-Yd-8C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="51.5625"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="xAg-Wq-13w">
+            <objects>
+                <viewController id="5c7-Rp-fMN" customClass="ProfileViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nis-Dr-mEb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Jv-6F-jOh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="go5-Fp-7QF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wr-9X-jyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="2346"/>
+        </scene>
+        <!--Category Table View Controller-->
+        <scene sceneID="QJH-lx-zK9">
+            <objects>
+                <tableViewController id="49B-60-TlT" customClass="CategoryTableViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jcn-Fv-33g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="K8D-s4-ruh">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K8D-s4-ruh" id="wWm-3u-TVc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="49B-60-TlT" id="oJU-Om-hak"/>
+                            <outlet property="delegate" destination="49B-60-TlT" id="zd8-hf-FXJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mwb-9E-2TL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8u-14-GU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="2360"/>
+        </scene>
+        <!--Favorites Table View Controller-->
+        <scene sceneID="JFu-oz-876">
+            <objects>
+                <tableViewController id="udO-tc-AL5" customClass="FavoritesTableViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cRT-5j-4IC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R4Z-zm-f8l">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R4Z-zm-f8l" id="Bla-Eu-rfI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="udO-tc-AL5" id="iwD-As-Aqk"/>
+                            <outlet property="delegate" destination="udO-tc-AL5" id="Wwp-nc-LWG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="br7-uv-6P4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQb-l1-rQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1251" y="2360"/>
+        </scene>
+        <!--Home Table View Controller-->
+        <scene sceneID="54g-aT-bYB">
+            <objects>
+                <tableViewController id="xpP-Z5-fdD" customClass="HomeTableViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OTj-Re-Jdm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xOE-K6-GBL">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xOE-K6-GBL" id="dQ9-Co-nSF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xpP-Z5-fdD" id="NaY-qe-Pva"/>
+                            <outlet property="delegate" destination="xpP-Z5-fdD" id="eyI-X6-KcM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6UI-AF-Q29"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="st9-ar-6OH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="2361"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FnU-1F-6pa">
+            <objects>
+                <tabBarController id="dma-nQ-URC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zmH-4k-24X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Svd-bQ-mIr" kind="relationship" relationship="viewControllers" id="ald-WC-ucR"/>
+                        <segue destination="mHt-KR-dIe" kind="relationship" relationship="viewControllers" id="NrE-dL-kJl"/>
+                        <segue destination="3En-aT-CzP" kind="relationship" relationship="viewControllers" id="J6O-z4-16d"/>
+                        <segue destination="Cc1-OX-KAa" kind="relationship" relationship="viewControllers" id="3Z4-nC-wB6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9D-fR-7BV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="882"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="XgV-a6-mJU">
+            <objects>
+                <viewController id="6u6-6K-xth" customClass="LoginViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7KO-IL-zgy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOG IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z1-gm-eG0" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="51" y="193" width="312" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good to see you again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APu-ae-7L9" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="51" y="263" width="312" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Your Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpj-eL-Otw" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="51" y="617" width="312" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJl-pt-qr2" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="372" width="344" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chZ-Ph-khN" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="457" width="344" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f3-jG-88R" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="548" width="344" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.8084375291" blue="0.33766198190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dma-nQ-URC" kind="presentation" id="jiS-NX-gQ6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gzC-jd-6v1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nmi-94-C1o">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="AJ7-9s-0md">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="6u6-6K-xth" id="XfJ-Fk-g4t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="yJl-pt-qr2" id="77k-M4-Nfd"/>
+                        <outlet property="paasswordTextField" destination="chZ-Ph-khN" id="aEL-JQ-xCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZn-Cd-2aW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="51.5625"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="QAg-vi-kSj">
+            <objects>
+                <viewController id="wYN-aT-uUB" customClass="SignUpViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IP6-Zp-QTs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-Vp-zsZ" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="51" y="196" width="312" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nice to meet you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg3-WE-wEz" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="51" y="269" width="312" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laF-qh-r4g" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="372" width="344" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOR-e9-dky" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="520" width="344" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-Xc-6Dn" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="443" width="344" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEt-r7-A4j" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="35" y="604" width="344" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.8084375291" blue="0.33766198190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CREATE ACCOUNT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dma-nQ-URC" kind="presentation" id="gWd-a9-hEC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9ZR-B4-o6y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h8z-IE-opg">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="ipG-8A-dPs">
+                            <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="wYN-aT-uUB" id="SyK-Rg-UDI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13V-jk-BlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360.8695652173915" y="51.5625"/>
+        </scene>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="uS0-va-8St">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jth-yS-0v9" customClass="CustomNavigationController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2hh-Dm-mEg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a9b-Dq-fg8" kind="relationship" relationship="rootViewController" id="1Ni-bK-g5X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCI-0r-e7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="51.5625"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="oxF-77-4eN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Svd-bQ-mIr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="ic_home_grey.png" selectedImage="ic_home_orange.png" id="4TQ-Uk-oeJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qaN-Cc-FTE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xpP-Z5-fdD" kind="relationship" relationship="rootViewController" id="GnX-Cj-xJz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzk-X8-boJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925" y="1625"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="v5I-Ok-xJg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3En-aT-CzP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="ic_favorites_grey.png" selectedImage="ic_favorites_orange.png" id="tOa-B4-dBx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O9I-wx-z60">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="udO-tc-AL5" kind="relationship" relationship="rootViewController" id="Mz5-vS-YVs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mu-ZC-12N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="1625"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ljV-cw-ih0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mHt-KR-dIe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="ic_recipes_grey" selectedImage="ic_recipes_orange" id="XKD-SF-OTB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZD-L8-0LP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="49B-60-TlT" kind="relationship" relationship="rootViewController" id="opx-Hd-ODL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ck4-X2-YvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="1625"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="AXD-c5-ZrM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cc1-OX-KAa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" image="ic_profile_grey.png" selectedImage="ic_profile_orange" id="KUj-ri-pPs"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ghv-iU-thz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5c7-Rp-fMN" kind="relationship" relationship="rootViewController" id="Q0I-Yw-ugO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwd-22-936" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="1625"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gWd-a9-hEC"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="ic_favorites_grey.png" width="18" height="16"/>
+        <image name="ic_favorites_orange.png" width="18" height="16"/>
+        <image name="ic_home_grey.png" width="18" height="15"/>
+        <image name="ic_home_orange.png" width="18" height="15"/>
+        <image name="ic_profile_grey.png" width="17" height="18"/>
+        <image name="ic_profile_orange" width="17" height="18"/>
+        <image name="ic_recipes_grey" width="15" height="18"/>
+        <image name="ic_recipes_orange" width="15" height="18"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
