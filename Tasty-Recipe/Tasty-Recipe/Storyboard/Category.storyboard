@@ -11,18 +11,47 @@
         <scene sceneID="ivn-yM-r2l">
             <objects>
                 <tableViewController id="h31-44-ZfF" customClass="CategoryTableViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0xG-pU-hir">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0xG-pU-hir">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="F2C-PC-FYx">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="95" id="F2C-PC-FYx" customClass="CategoryCell" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F2C-PC-FYx" id="n2o-OP-dvk">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="By4-RF-f17" customClass="ShadowView" customModule="Tasty_Recipe" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="5" width="378" height="85"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-fo-ln0">
+                                                    <rect key="frame" x="8" y="8" width="362" height="69"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="nGr-fo-ln0" firstAttribute="leading" secondItem="By4-RF-f17" secondAttribute="leading" constant="8" id="Wfc-pe-XZd"/>
+                                                <constraint firstItem="nGr-fo-ln0" firstAttribute="top" secondItem="By4-RF-f17" secondAttribute="top" constant="8" id="gHr-aM-89R"/>
+                                                <constraint firstAttribute="bottom" secondItem="nGr-fo-ln0" secondAttribute="bottom" constant="10" id="hke-H8-ver"/>
+                                                <constraint firstAttribute="trailing" secondItem="nGr-fo-ln0" secondAttribute="trailing" constant="8" id="rnA-Gx-hj2"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="By4-RF-f17" firstAttribute="top" secondItem="n2o-OP-dvk" secondAttribute="top" constant="5" id="XNf-en-xAS"/>
+                                        <constraint firstAttribute="trailing" secondItem="By4-RF-f17" secondAttribute="trailing" constant="16" id="mMO-OK-Uf6"/>
+                                        <constraint firstItem="By4-RF-f17" firstAttribute="leading" secondItem="n2o-OP-dvk" secondAttribute="leading" constant="16" id="mUT-xw-Cw5"/>
+                                        <constraint firstAttribute="bottom" secondItem="By4-RF-f17" secondAttribute="bottom" constant="5" id="wtR-Tp-HPC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="nGr-fo-ln0" id="H6K-Ov-5dy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -36,7 +65,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sJ-wA-pqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="2360"/>
+            <point key="canvasLocation" x="560.86956521739137" y="2359.8214285714284"/>
         </scene>
         <!--Categories-->
         <scene sceneID="Jq7-7t-uRz">
