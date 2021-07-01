@@ -15,9 +15,15 @@
 		834B43F4268B44560080B4A7 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F3268B44560080B4A7 /* LoginSignUpViewController.swift */; };
 		834B43F6268B54F30080B4A7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F5268B54F30080B4A7 /* CustomButton.swift */; };
 		834B43F8268B5A2D0080B4A7 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F7268B5A2D0080B4A7 /* CustomLabel.swift */; };
+		839CF433268DB85F00E5A17D /* FeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CF432268DB85F00E5A17D /* FeatureCell.swift */; };
+		839CF435268DB89000E5A17D /* FeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839CF434268DB89000E5A17D /* FeatureCell.xib */; };
 		83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329A8268C5DFD00F0846D /* LoginViewController.swift */; };
 		83E329AB268C668700F0846D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329AA268C668700F0846D /* CustomTextField.swift */; };
 		83E329AD268C68DA00F0846D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329AC268C68DA00F0846D /* SignUpViewController.swift */; };
+		83E6A0B3268DCBC7004C5438 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E6A0B2268DCBC7004C5438 /* HeaderView.swift */; };
+		83E6A0B5268DCC8D004C5438 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E6A0B4268DCC8D004C5438 /* HeaderView.xib */; };
+		83E6A0B7268DD8EC004C5438 /* FeaturedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E6A0B6268DD8EC004C5438 /* FeaturedCollectionCell.swift */; };
+		83E6A0B9268DD90D004C5438 /* FeaturedCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E6A0B8268DD90D004C5438 /* FeaturedCollectionCell.xib */; };
 		83E9E7A6268C6F6000023D2F /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */; };
 		83E9E7AF268C7E4E00023D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7AE268C7E4E00023D2F /* Assets.xcassets */; };
 		83E9E7B1268C82AD00023D2F /* ic_arrow_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7B0268C82AD00023D2F /* ic_arrow_back.png */; };
@@ -34,6 +40,7 @@
 		83E9E7CF268C9C9000023D2F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7CE268C9C9000023D2F /* Profile.storyboard */; };
 		83E9E7D3268CC7CE00023D2F /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7D2268CC7CE00023D2F /* RecipeCell.swift */; };
 		83E9E7D5268CC7F700023D2F /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7D4268CC7F700023D2F /* RecipeCell.xib */; };
+		83E9E7DB268CDB2B00023D2F /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7DA268CDB2B00023D2F /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +54,15 @@
 		834B43F3268B44560080B4A7 /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		834B43F5268B54F30080B4A7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		834B43F7268B5A2D0080B4A7 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		839CF432268DB85F00E5A17D /* FeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCell.swift; sourceTree = "<group>"; };
+		839CF434268DB89000E5A17D /* FeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCell.xib; sourceTree = "<group>"; };
 		83E329A8268C5DFD00F0846D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83E329AA268C668700F0846D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		83E329AC268C68DA00F0846D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		83E6A0B2268DCBC7004C5438 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		83E6A0B4268DCC8D004C5438 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		83E6A0B6268DD8EC004C5438 /* FeaturedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionCell.swift; sourceTree = "<group>"; };
+		83E6A0B8268DD90D004C5438 /* FeaturedCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionCell.xib; sourceTree = "<group>"; };
 		83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		83E9E7AE268C7E4E00023D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83E9E7B0268C82AD00023D2F /* ic_arrow_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_back.png; sourceTree = "<group>"; };
@@ -66,6 +79,7 @@
 		83E9E7CE268C9C9000023D2F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		83E9E7D2268CC7CE00023D2F /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		83E9E7D4268CC7F700023D2F /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
+		83E9E7DA268CDB2B00023D2F /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +140,7 @@
 				834B43F7268B5A2D0080B4A7 /* CustomLabel.swift */,
 				83E329AA268C668700F0846D /* CustomTextField.swift */,
 				83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */,
+				83E9E7DA268CDB2B00023D2F /* ShadowView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -198,6 +213,12 @@
 			children = (
 				83E9E7D2268CC7CE00023D2F /* RecipeCell.swift */,
 				83E9E7D4268CC7F700023D2F /* RecipeCell.xib */,
+				839CF432268DB85F00E5A17D /* FeatureCell.swift */,
+				839CF434268DB89000E5A17D /* FeatureCell.xib */,
+				83E6A0B2268DCBC7004C5438 /* HeaderView.swift */,
+				83E6A0B4268DCC8D004C5438 /* HeaderView.xib */,
+				83E6A0B6268DD8EC004C5438 /* FeaturedCollectionCell.swift */,
+				83E6A0B8268DD90D004C5438 /* FeaturedCollectionCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -269,8 +290,11 @@
 				83E9E7D5268CC7F700023D2F /* RecipeCell.xib in Resources */,
 				83E9E7C1268C95ED00023D2F /* TapBarMenu.storyboard in Resources */,
 				83E9E7C8268C99EA00023D2F /* Category.storyboard in Resources */,
+				83E6A0B9268DD90D004C5438 /* FeaturedCollectionCell.xib in Resources */,
+				839CF435268DB89000E5A17D /* FeatureCell.xib in Resources */,
 				834B43E3268B34C50080B4A7 /* Main.storyboard in Resources */,
 				83E9E7C5268C986D00023D2F /* Home.storyboard in Resources */,
+				83E6A0B5268DCC8D004C5438 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,17 +306,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E9E7D3268CC7CE00023D2F /* RecipeCell.swift in Sources */,
+				83E6A0B3268DCBC7004C5438 /* HeaderView.swift in Sources */,
 				83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */,
 				83E9E7BA268C904E00023D2F /* FavoritesTableViewController.swift in Sources */,
+				83E6A0B7268DD8EC004C5438 /* FeaturedCollectionCell.swift in Sources */,
 				83E9E7B6268C8FA400023D2F /* HomeTableViewController.swift in Sources */,
 				834B43F4268B44560080B4A7 /* LoginSignUpViewController.swift in Sources */,
 				83E9E7BC268C909100023D2F /* ProfileViewController.swift in Sources */,
 				834B43F8268B5A2D0080B4A7 /* CustomLabel.swift in Sources */,
 				834B43DC268B34C50080B4A7 /* AppDelegate.swift in Sources */,
+				839CF433268DB85F00E5A17D /* FeatureCell.swift in Sources */,
 				83E329AB268C668700F0846D /* CustomTextField.swift in Sources */,
 				834B43F1268B3D830080B4A7 /* CustomColor.swift in Sources */,
 				83E9E7A6268C6F6000023D2F /* CustomNavigationController.swift in Sources */,
 				83E329AD268C68DA00F0846D /* SignUpViewController.swift in Sources */,
+				83E9E7DB268CDB2B00023D2F /* ShadowView.swift in Sources */,
 				834B43DE268B34C50080B4A7 /* SceneDelegate.swift in Sources */,
 				834B43F6268B54F30080B4A7 /* CustomButton.swift in Sources */,
 				83E9E7B8268C8FF700023D2F /* CategoryTableViewController.swift in Sources */,
