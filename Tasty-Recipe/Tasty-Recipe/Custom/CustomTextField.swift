@@ -21,7 +21,7 @@ class CustomTextField: UITextField {
     func defaultSetUp() {
         
         //textfields
-        layer.borderColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1).cgColor
+        layer.borderColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1).cgColor
         layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
         layer.borderWidth = 1
         

@@ -23,6 +23,7 @@
 		8354F9B7268F21D5007C8AA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8354F9B6268F21D5007C8AA7 /* GoogleService-Info.plist */; };
 		839CF433268DB85F00E5A17D /* FeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CF432268DB85F00E5A17D /* FeatureCell.swift */; };
 		839CF435268DB89000E5A17D /* FeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839CF434268DB89000E5A17D /* FeatureCell.xib */; };
+		83CFBB5726910DA0002558B4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CFBB5626910DA0002558B4 /* Constans.swift */; };
 		83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329A8268C5DFD00F0846D /* LoginViewController.swift */; };
 		83E329AB268C668700F0846D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329AA268C668700F0846D /* CustomTextField.swift */; };
 		83E329AD268C68DA00F0846D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329AC268C68DA00F0846D /* SignUpViewController.swift */; };
@@ -64,6 +65,7 @@
 		8354F9B6268F21D5007C8AA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		839CF432268DB85F00E5A17D /* FeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCell.swift; sourceTree = "<group>"; };
 		839CF434268DB89000E5A17D /* FeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCell.xib; sourceTree = "<group>"; };
+		83CFBB5626910DA0002558B4 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		83E329A8268C5DFD00F0846D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83E329AA268C668700F0846D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		83E329AC268C68DA00F0846D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		834B43DA268B34C50080B4A7 /* Tasty-Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				83CFBB5526910D60002558B4 /* Helpers */,
 				8354F9B6268F21D5007C8AA7 /* GoogleService-Info.plist */,
 				83E9E7D1268CC76300023D2F /* Cells */,
 				83E9E7C2268C980A00023D2F /* Storyboard */,
@@ -168,6 +171,14 @@
 				83E329AC268C68DA00F0846D /* SignUpViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		83CFBB5526910D60002558B4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83CFBB5626910DA0002558B4 /* Constans.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		83E9E7B2268C82F900023D2F /* Icons */ = {
@@ -337,6 +348,7 @@
 				83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */,
 				83E9E7BA268C904E00023D2F /* FavoritesTableViewController.swift in Sources */,
 				83E6A0B7268DD8EC004C5438 /* FeaturedCollectionCell.swift in Sources */,
+				83CFBB5726910DA0002558B4 /* Constans.swift in Sources */,
 				83E9E7B6268C8FA400023D2F /* HomeTableViewController.swift in Sources */,
 				834B43F4268B44560080B4A7 /* LoginSignUpViewController.swift in Sources */,
 				83E9E7BC268C909100023D2F /* ProfileViewController.swift in Sources */,

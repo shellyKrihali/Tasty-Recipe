@@ -76,7 +76,7 @@
         <!--Login View Controller-->
         <scene sceneID="e1X-Ea-CdC">
             <objects>
-                <viewController id="Koy-vz-kYF" customClass="LoginViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="Koy-vz-kYF" customClass="LoginViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2S2-x0-1JP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,11 +88,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Your Password?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="335-29-3SH" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="335-29-3SH" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
                                 <rect key="frame" x="44" y="639" width="324" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9t-Dr-oxe" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
@@ -121,7 +121,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Epg-zj-svE" kind="presentation" id="VpG-Ft-JIs"/>
+                                    <action selector="LoginButtonTapped:" destination="Koy-vz-kYF" eventType="touchUpInside" id="U7T-tE-Nhx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOG IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0Z-dg-9FO" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
@@ -145,6 +145,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="b9t-Dr-oxe" id="mzj-7Y-cjF"/>
+                        <outlet property="errorLabel" destination="335-29-3SH" id="RFd-cP-2WL"/>
+                        <outlet property="loginButton" destination="7MP-9y-Jy5" id="zYi-2p-gCk"/>
                         <outlet property="paasswordTextField" destination="1ga-Ry-ldL" id="IvL-N6-Y14"/>
                     </connections>
                 </viewController>
@@ -155,66 +157,94 @@
         <!--Sign Up View Controller-->
         <scene sceneID="3C5-fv-PY0">
             <objects>
-                <viewController id="hGe-zX-FGb" customClass="SignUpViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" id="hGe-zX-FGb" customClass="SignUpViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CLV-5d-Joi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-nI-uIk" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-nI-uIk" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
                                 <rect key="frame" x="28" y="219" width="358" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="tUo-Sb-2wl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-nR-Bjk" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-nR-Bjk" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
                                 <rect key="frame" x="20" y="355" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="hGe-zX-FGb" id="rZu-mR-L04"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmU-RC-Uv1" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmU-RC-Uv1" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
                                 <rect key="frame" x="20" y="513" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="hGe-zX-FGb" id="dMk-yd-G7K"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6R-8j-jLR" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I6R-8j-jLR" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
                                 <rect key="frame" x="20" y="424" width="374" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="6Ed-Jb-5Oq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="hGe-zX-FGb" id="iM1-Um-GFi"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ9-51-rbA" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
-                                <rect key="frame" x="20" y="596" width="374" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ9-51-rbA" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="20" y="614" width="374" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.8084375291" blue="0.33766198190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="CREATE ACCOUNT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Epg-zj-svE" kind="presentation" id="pdd-3B-bp6"/>
+                                    <action selector="signUpTapped:" destination="hGe-zX-FGb" eventType="touchUpInside" id="Uln-Mw-Owg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nice to meet you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B90-6D-w8l" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nice to meet you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B90-6D-w8l" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
                                 <rect key="frame" x="24" y="275" width="366" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57v-vx-qBr" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="73" y="685" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <color key="highlightedColor" systemColor="systemRedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZO0-JP-6sm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I6R-8j-jLR" firstAttribute="top" secondItem="hgJ-nR-Bjk" secondAttribute="bottom" constant="35" id="28n-BH-Prd"/>
+                            <constraint firstItem="I6R-8j-jLR" firstAttribute="centerY" secondItem="CLV-5d-Joi" secondAttribute="centerY" id="4WV-Q9-Mhi"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="trailing" secondItem="hgJ-nR-Bjk" secondAttribute="trailing" id="9Gw-vr-ecP"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="top" secondItem="xmU-RC-Uv1" secondAttribute="bottom" constant="67" id="BK9-gC-b94"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="leading" secondItem="CLV-5d-Joi" secondAttribute="leadingMargin" id="H7W-Rf-dpQ"/>
+                            <constraint firstItem="Sqd-nI-uIk" firstAttribute="top" secondItem="ZO0-JP-6sm" secondAttribute="top" constant="131" id="K6U-p7-fSe"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="leading" secondItem="I6R-8j-jLR" secondAttribute="leading" id="LGt-5V-Jkw"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="leading" secondItem="hgJ-nR-Bjk" secondAttribute="leading" id="PdE-dg-XeY"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="centerX" secondItem="B90-6D-w8l" secondAttribute="centerX" id="YHW-5G-KyR"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="leading" secondItem="xmU-RC-Uv1" secondAttribute="leading" id="aXA-Zg-48B"/>
+                            <constraint firstItem="Sqd-nI-uIk" firstAttribute="leading" secondItem="ZO0-JP-6sm" secondAttribute="leading" constant="28" id="bqr-fz-zW8"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="trailing" secondItem="I6R-8j-jLR" secondAttribute="trailing" id="elh-iz-5yp"/>
+                            <constraint firstItem="57v-vx-qBr" firstAttribute="leading" secondItem="ZO0-JP-6sm" secondAttribute="leading" constant="73" id="euJ-24-Dzh"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="centerX" secondItem="Sqd-nI-uIk" secondAttribute="centerX" id="fMT-tO-qgO"/>
+                            <constraint firstItem="B90-6D-w8l" firstAttribute="top" secondItem="Sqd-nI-uIk" secondAttribute="bottom" constant="8" id="gWj-31-Zy6"/>
+                            <constraint firstItem="ZO0-JP-6sm" firstAttribute="trailing" secondItem="57v-vx-qBr" secondAttribute="trailing" constant="101" id="kgt-Dt-YMl"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="trailing" secondItem="CLV-5d-Joi" secondAttribute="trailingMargin" id="mCc-Mw-m5n"/>
+                            <constraint firstItem="ZO0-JP-6sm" firstAttribute="bottom" secondItem="57v-vx-qBr" secondAttribute="bottom" constant="156" id="qv4-To-Cs4"/>
+                            <constraint firstItem="57v-vx-qBr" firstAttribute="top" secondItem="CZ9-51-rbA" secondAttribute="bottom" constant="41" id="r2z-fc-j4Q"/>
+                            <constraint firstItem="CZ9-51-rbA" firstAttribute="trailing" secondItem="xmU-RC-Uv1" secondAttribute="trailing" id="w1a-J4-TPa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f58-FB-XVZ">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="Nn4-fL-7mK">
@@ -227,8 +257,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="I6R-8j-jLR" id="b8z-zF-9li"/>
+                        <outlet property="errorLabel" destination="57v-vx-qBr" id="wVt-Z3-qpt"/>
                         <outlet property="nameTextField" destination="hgJ-nR-Bjk" id="5In-0v-Uas"/>
                         <outlet property="passwordTextField" destination="xmU-RC-Uv1" id="f02-l3-tc5"/>
+                        <outlet property="signUpButton" destination="CZ9-51-rbA" id="ZEG-uj-UT6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dlp-kL-apt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -256,15 +288,12 @@
         <!--TapBarSection-->
         <scene sceneID="1Nq-zX-ULl">
             <objects>
-                <viewControllerPlaceholder storyboardName="TapBarMenu" referencedIdentifier="TapBarSection" id="Epg-zj-svE" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="TapBarVC" storyboardName="TapBarMenu" referencedIdentifier="TapBarSection" id="Epg-zj-svE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSD-eU-Bxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1403" y="882"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pdd-3B-bp6"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="tasty" width="186" height="190"/>
@@ -273,6 +302,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
