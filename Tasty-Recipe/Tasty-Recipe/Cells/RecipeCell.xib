@@ -21,7 +21,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-OP-HrI">
                     <rect key="frame" x="16" y="8" width="343" height="244"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-az-UpP">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-az-UpP">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="128" id="RZv-4w-wbR"/>
@@ -133,6 +133,13 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="levelOfCookingLabel" destination="bz8-nF-BPF" id="a2S-0q-9kf"/>
+                <outlet property="recipeImage" destination="nsE-az-UpP" id="I5U-jd-bdm"/>
+                <outlet property="recipeNameLabel" destination="zrz-lE-VVn" id="4BO-X7-R17"/>
+                <outlet property="servingLabel" destination="a5m-CK-cHd" id="07a-JZ-VzI"/>
+                <outlet property="timetocookLabel" destination="mVy-rs-nq2" id="6Pk-Ds-XHy"/>
+            </connections>
             <point key="canvasLocation" x="136.95652173913044" y="-134.59821428571428"/>
         </view>
     </objects>

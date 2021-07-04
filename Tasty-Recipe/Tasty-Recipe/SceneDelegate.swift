@@ -13,13 +13,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        /*
+        
         let tabBarStoryboard = UIStoryboard(name: "TapBarMenu", bundle: nil)
         let tabBarController = tabBarStoryboard.instantiateViewController(withIdentifier: "TapBarSection") as? UITabBarController
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
-        */
+        
         
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
