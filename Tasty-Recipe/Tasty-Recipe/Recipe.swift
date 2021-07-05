@@ -26,5 +26,6 @@ struct Recipe{
         self.instructions = instructions
         self.serving = serving
     }
+    
 }
     

@@ -55,7 +55,6 @@ class HomeTableViewController: UITableViewController {
         print("HOME inside cellforrowat")
         print(self.recipes[indexPath.section])
         print("HOME outside cell for row at")
-        //CHANGE WHEN THE FUNCTION CREATED
         cell.setUpCell(recipe: self.recipes[indexPath.section])
         return cell
     }
