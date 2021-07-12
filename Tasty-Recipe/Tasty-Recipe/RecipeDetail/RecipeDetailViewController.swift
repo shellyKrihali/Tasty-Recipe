@@ -55,7 +55,6 @@ extension RecipeDetailViewController: UITableViewDataSource {
         365
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(headers[indexPath.section])
         let cell = UITableViewCell()
         if (headers[indexPath.section].contains("Description")){
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeDescriptionCell") as! RecipeDescriptionCell
@@ -86,7 +85,6 @@ extension RecipeDetailViewController: UITableViewDataSource {
         titleLabel.textColor = .white
         titleLabel.textAlignment = .center
         if(headers[section].contains("Description")){
-            print("here")
             titleLabel.text = recipe?.name
         }else{
             titleLabel.text = headers[section]

@@ -8,19 +8,25 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UISearchBarDelegate {
 
+    
+    @IBOutlet var table: UITableView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     @IBOutlet weak var LogOutButton: UIBarButtonItem!
     
     @IBOutlet weak var SearchButton: UIBarButtonItem!
     
     var recipes : [Recipe] = []
+    var currentRecipes: [Recipe] = []
     let manager = Manager()
     
 
     static var recipeCollectionRef: CollectionReference!
-    
+    var names : [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
        /* let searchBar = UISearchBar()
@@ -29,22 +35,51 @@ class HomeTableViewController: UITableViewController {
         searchBar.placeholder = "Search"
 
             navigationItem.titleView = searchBar*/
+        
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
         
-      
+      setUpSearchBar()
+        alterLayout()
         self.clearsSelectionOnViewWillAppear = true
     }
     override func viewDidAppear(_ animated: Bool) {
         manager.loadData() { recipesArray in
             self.recipes = recipesArray
+            self.currentRecipes = self.recipes
             self.tableView.reloadData()
-                
+            for recipe in self.recipes{
+                self.names.append(recipe.name!)
+            }
+            
         }
         
        
     }
-    
+    private func alterLayout(){
+        table.tableHeaderView = UIView()
+        table.estimatedSectionHeaderHeight = 50
+        navigationItem.titleView = searchBar
+        searchBar.placeholder = "Search By Name"
+    }
+    private func setUpSearchBar(){
+        searchBar.delegate = self
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else{
+            currentRecipes = recipes
+            table.reloadData()
+            return
+            
+        }
+        
+        currentRecipes = recipes.filter({
+            recipe -> Bool in
+            return recipe.name!.lowercased().contains(searchText.lowercased())
+        })
+        table.reloadData()
+    }
+
     @IBAction func LogOutButtonTapped(_ sender: Any) {
         UserDefaults.standard.set("", forKey: "id")
         let storyboard :UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -64,19 +99,19 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return recipes.count
+        return currentRecipes.count
     }
     func openRecipe(index: Int){
-        UserDefaults.standard.set(self.recipes[index].name, forKey: "name")
-        UserDefaults.standard.set(self.recipes[index].id, forKey: "recipeId")
+        UserDefaults.standard.set(self.currentRecipes[index].name, forKey: "name")
+        UserDefaults.standard.set(self.currentRecipes[index].id, forKey: "recipeId")
 
-        UserDefaults.standard.set(self.recipes[index].timeInMinutes, forKey: "timeInMinutes")
-        UserDefaults.standard.set(self.recipes[index].serving, forKey: "serving")
-        UserDefaults.standard.set(self.recipes[index].image, forKey: "image")
-        UserDefaults.standard.set(self.recipes[index].category, forKey: "category")
-        UserDefaults.standard.set(self.recipes[index].ingredients, forKey: "ingredients")
-        UserDefaults.standard.set(self.recipes[index].instructions, forKey: "instructions")
-        UserDefaults.standard.set(self.recipes[index].levelOfCooking, forKey: "levelOfCooking")
+        UserDefaults.standard.set(self.currentRecipes[index].timeInMinutes, forKey: "timeInMinutes")
+        UserDefaults.standard.set(self.currentRecipes[index].serving, forKey: "serving")
+        UserDefaults.standard.set(self.currentRecipes[index].image, forKey: "image")
+        UserDefaults.standard.set(self.currentRecipes[index].category, forKey: "category")
+        UserDefaults.standard.set(self.currentRecipes[index].ingredients, forKey: "ingredients")
+        UserDefaults.standard.set(self.currentRecipes[index].instructions, forKey: "instructions")
+        UserDefaults.standard.set(self.currentRecipes[index].levelOfCooking, forKey: "levelOfCooking")
         
         let storyboard :UIStoryboard = UIStoryboard(name: "RecipeDetail", bundle: nil)
         let recipeDetailViewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController") as! RecipeDetailViewController
@@ -99,7 +134,7 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
         
       
-        cell.setUpCell(recipe: self.recipes[indexPath.section])
+        cell.setUpCell(recipe: self.currentRecipes[indexPath.section])
         return cell
     }
 }

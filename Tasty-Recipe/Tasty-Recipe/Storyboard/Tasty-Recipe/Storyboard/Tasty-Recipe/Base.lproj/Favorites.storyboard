@@ -30,9 +30,7 @@
                             <outlet property="delegate" destination="pzK-8M-f2l" id="gPM-bQ-6jv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FAVORITES" id="5KC-Lp-Kzf">
-                        <barButtonItem key="rightBarButtonItem" image="ic_search" id="fKe-pz-m5C"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="FAVORITES" id="5KC-Lp-Kzf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qM-pS-tZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,7 +60,6 @@
     <resources>
         <image name="ic_favorites_grey.png" width="18" height="16"/>
         <image name="ic_favorites_orange.png" width="18" height="16"/>
-        <image name="ic_search" width="18" height="18"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
