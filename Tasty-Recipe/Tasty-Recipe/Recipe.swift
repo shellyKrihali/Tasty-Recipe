@@ -8,6 +8,7 @@
 import Foundation
 struct Recipe{
     var name: String?
+    var id: String?
     var levelOfCooking: String?
     var category: String?
     var timeInMinutes: Int?
@@ -16,8 +17,9 @@ struct Recipe{
     var instructions:String?
     var serving:Int?
     
-    init(name: String, levelOfCooking: String, category: String,timeInMinutes: Int, ingredients: String, image:String,instructions:String,serving:Int){
+    init(name: String,id: String, levelOfCooking: String, category: String,timeInMinutes: Int, ingredients: String, image:String,instructions:String,serving:Int){
         self.name = name
+        self.id = id
         self.levelOfCooking = levelOfCooking
         self.category = category
         self.timeInMinutes = timeInMinutes
@@ -25,6 +27,10 @@ struct Recipe{
         self.image = image
         self.instructions = instructions
         self.serving = serving
+    }
+    
+    init(){
+        
     }
     
 }

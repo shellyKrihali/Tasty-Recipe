@@ -10,9 +10,11 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+let appIconService = AppIconService()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        appIconService.changeAppIcon()
         FirebaseApp.configure()
         return true
     }

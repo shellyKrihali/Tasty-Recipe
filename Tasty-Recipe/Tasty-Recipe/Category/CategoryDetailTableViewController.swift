@@ -1,66 +1,33 @@
 //
-//  HomeTableViewController.swift
+//  CategoryDetailTableViewController.swift
 //  Tasty-Recipe
 //
-//  Created by user196689 on 6/30/21.
+//  Created by user196689 on 7/7/21.
 //
 
 import UIKit
-import Firebase
-import FirebaseFirestore
-class HomeTableViewController: UITableViewController {
 
-    
-    @IBOutlet weak var LogOutButton: UIBarButtonItem!
-    
-    @IBOutlet weak var SearchButton: UIBarButtonItem!
-    
+class CategoryDetailTableViewController: UITableViewController {
     var recipes : [Recipe] = []
     let manager = Manager()
-    
 
-    static var recipeCollectionRef: CollectionReference!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       /* let searchBar = UISearchBar()
-        searchBar.sizeToFit()
-
-        searchBar.placeholder = "Search"
-
-            navigationItem.titleView = searchBar*/
+        print("insidecategoryDetail")
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
-        
-      
         self.clearsSelectionOnViewWillAppear = true
+
+        
     }
     override func viewDidAppear(_ animated: Bool) {
-        manager.loadData() { recipesArray in
-            self.recipes = recipesArray
-            self.tableView.reloadData()
-                
-        }
-        
-       
+        let categoryChoice = UserDefaults.standard.string(forKey: "categoryChoice")!
+        manager.loadRecipeByCategory(category: categoryChoice ){
+            recipesCategoryArray in
+                self.recipes = recipesCategoryArray
+                self.tableView.reloadData()        }
     }
-    
-    @IBAction func LogOutButtonTapped(_ sender: Any) {
-        UserDefaults.standard.set("", forKey: "id")
-        let storyboard :UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginSignUpVC = storyboard.instantiateViewController(withIdentifier: "loginSignUpViewController") as! LoginSignUpViewController
-        self.present(loginSignUpVC, animated: true, completion: nil)
-        
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-            }
-            catch
-                let signOutError as NSError {
-                print("Error signing out: %@", signOutError)
-                }
-    }
-    
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,6 +57,7 @@ class HomeTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 260
+        
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         openRecipe(index: indexPath.section)
@@ -97,9 +65,11 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
-        
-      
         cell.setUpCell(recipe: self.recipes[indexPath.section])
         return cell
     }
+
+
+   
+
 }

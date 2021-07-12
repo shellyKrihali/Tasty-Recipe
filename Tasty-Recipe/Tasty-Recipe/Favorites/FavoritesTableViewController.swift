@@ -10,86 +10,57 @@ import Firebase
 import FirebaseFirestore
 class FavoritesTableViewController: UITableViewController {
 
-    static var recipeCollectionRef: CollectionReference!
     var recipes : [Recipe] = []
-  //  let items = ["pasta", "pasta", "pasta"]
+    let manager = Manager()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
+ 
         self.clearsSelectionOnViewWillAppear = true
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        loadData() { recipesArray in
-            self.recipes = recipesArray
-            print("inside view did appear")
-            print(self.recipes)
-            print("after view did appear")
+    manager.loadFavorites() { favoritesArray in
+            self.recipes = favoritesArray
             self.tableView.reloadData()
-                
         }
     }
-    
+    func openRecipe(index: Int){
+        UserDefaults.standard.set(self.recipes[index].name, forKey: "name")
+        UserDefaults.standard.set(self.recipes[index].timeInMinutes, forKey: "timeInMinutes")
+        UserDefaults.standard.set(self.recipes[index].serving, forKey: "serving")
+        UserDefaults.standard.set(self.recipes[index].image, forKey: "image")
+        UserDefaults.standard.set(self.recipes[index].category, forKey: "category")
+        UserDefaults.standard.set(self.recipes[index].ingredients, forKey: "ingredients")
+        UserDefaults.standard.set(self.recipes[index].instructions, forKey: "instructions")
+        UserDefaults.standard.set(self.recipes[index].levelOfCooking, forKey: "levelOfCooking")
+        
+        let storyboard :UIStoryboard = UIStoryboard(name: "RecipeDetail", bundle: nil)
+        let recipeDetailViewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController") as! RecipeDetailViewController
+        self.present(recipeDetailViewController, animated: true, completion: nil)
+        
+        
+    }
     // MARK: - Table view data source
-  
 }
 extension FavoritesTableViewController{
     override func numberOfSections(in tableView: UITableView) -> Int {
-        print("number of recipes")
-        print(recipes.count)
-        print("outside number of recipes")
+      
         return recipes.count
     }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openRecipe(index: indexPath.section)
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
-        print("FAVORITE inside cellforrowat")
-        print(self.recipes[indexPath.section])
-        print("FAVORITE outside cell for row at")
         cell.setUpCell(recipe: self.recipes[indexPath.section])
         return cell
     }
     
 }
-extension FavoritesTableViewController {
-    func loadData(_ callback:@escaping (([Recipe]) -> Void)) {
-        var recipesArray = [Recipe]()
-        FavoritesTableViewController.recipeCollectionRef = Firestore.firestore().collection("recipes")
-        FavoritesTableViewController.recipeCollectionRef.getDocuments { snapshot, error in
-            if let err = error{
-                print("error fetching docs\(err)")
-            }
-            else{
-                guard let snap = snapshot else {return}
-                for document in snap.documents{
-                    
-                    let name = document.get("name") as! String
-                    let levelOfCooking = document.get("levelOfCooking") as! String
-                    let category = document.get("category") as! String
-                    let timeInMinutes = document.get("timeInMinutes") as! Int
-                    let ingredients = document.get("ingredients") as! String
-                    let image = document.get("image") as! String
-                    let instructions = document.get("instructions") as! String
-                    let serving = document.get("serving") as! Int
-                    let recipe = Recipe(name: name, levelOfCooking: levelOfCooking, category: category, timeInMinutes: timeInMinutes, ingredients: ingredients, image: image, instructions: instructions, serving: serving)
-                    recipesArray.append(recipe)
-                    
-                    if(recipesArray.count == snap.count){
-                        RunLoop.main.perform{
-                            callback(recipesArray)
-                        }
-                    }
-                   
-                }// after for docs loop
-                
-            }
-        }
-     
-    }
 
-    }

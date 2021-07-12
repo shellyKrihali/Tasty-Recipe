@@ -55,8 +55,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         if (error != nil){
            showError(error!)
             
-        }else {
-            
+        }else {            
             //validate the fields without white spaces
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -71,13 +70,9 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
                 }
                 else {
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["name":name,"uid": result!.user.uid]) { error in
-                        
-                        if (error != nil){
-                            self.showError("Error saving user data")
-                            
-                        }
-                    }
+                    db.collection("users").document(result!.user.uid).setData(
+                        ["id": result!.user.uid,"name":name,"uid": result!.user.uid, "favorites": []]
+                    )
                     self.transitionToTabBar()
                 }
             }

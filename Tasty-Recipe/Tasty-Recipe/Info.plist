@@ -62,5 +62,22 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key>CFBundleIcons</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>AppIcons</key>
+                <dict>
+                <key>CFBundleIconFiles</key>
+                    <array>
+                        <string>tasty</string>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+    
+    
+    
 </dict>
 </plist>

@@ -31,9 +31,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasty" id="kSr-zl-391">
-                        <barButtonItem key="leftBarButtonItem" image="bell" catalog="system" id="2wi-cy-NE2"/>
-                        <barButtonItem key="rightBarButtonItem" image="ic_search" id="xfd-Ub-tJ2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="Q6I-t3-KrW">
+                            <color key="tintColor" red="1" green="0.8084375291" blue="0.33766198190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="LogOutButtonTapped:" destination="KZE-3M-reg" id="QZh-Er-xxZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ic_search" id="1zz-DM-CTd"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="LogOutButton" destination="Q6I-t3-KrW" id="TxZ-mU-Nbw"/>
+                        <outlet property="SearchButton" destination="Q6I-t3-KrW" id="Uj9-WR-ON0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rz-e4-pIC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="ic_home_grey.png" width="18" height="15"/>
         <image name="ic_home_orange.png" width="18" height="15"/>
         <image name="ic_search" width="18" height="18"/>

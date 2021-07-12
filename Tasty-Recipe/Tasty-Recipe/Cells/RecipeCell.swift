@@ -20,18 +20,12 @@ class RecipeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         selectionStyle = .none
-        //backgroundColor = .red
-//        let starBurron = UIButton(type: .system)
-//        starBurron.setTitle("SOME TITLE", for: .normal)
-//        starBurron.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     func setUpCell(recipe: Recipe){
         loadImage(recipe: recipe)

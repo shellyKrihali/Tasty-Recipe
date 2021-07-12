@@ -18,7 +18,8 @@ class NetworkProcessor{
        }
        
        typealias JSONDownloader = ((Codable?)-> Void)
-       typealias IMAGEDATADownloader = ((Data?, HTTPURLResponse?, Error?)-> Void)    //Download Image Data
+       typealias IMAGEDATADownloader = ((Data?, HTTPURLResponse?, Error?)-> Void)
+    //Download Image Data
     func downloadImage(_ completion : @escaping IMAGEDATADownloader ){
         guard let imageUrl = self.url else { return }
         let imageRequest = URLRequest(url: imageUrl)

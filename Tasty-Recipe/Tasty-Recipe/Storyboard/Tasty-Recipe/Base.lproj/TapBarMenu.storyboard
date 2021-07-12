@@ -20,7 +20,6 @@
                         <segue destination="aSb-aP-Ljk" kind="relationship" relationship="viewControllers" id="Viz-Uq-T0E"/>
                         <segue destination="zQb-EG-1Ej" kind="relationship" relationship="viewControllers" id="LTM-ef-gTX"/>
                         <segue destination="7wn-wP-0gm" kind="relationship" relationship="viewControllers" id="q5D-wR-eCN"/>
-                        <segue destination="IxI-6E-X1m" kind="relationship" relationship="viewControllers" id="khp-OX-b26"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1B-sB-1N3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -31,7 +30,7 @@
         <scene sceneID="9Lr-VF-ugg">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeSection" id="mC3-UZ-Opu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gRK-YV-Sly"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="ic_home_grey.png" selectedImage="ic_home_orange" id="gRK-YV-Sly"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUw-ns-0QA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +40,7 @@
         <scene sceneID="bEd-3O-OvL">
             <objects>
                 <viewControllerPlaceholder storyboardName="Category" referencedIdentifier="CategorySection" id="aSb-aP-Ljk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BMP-yC-cQQ"/>
+                    <tabBarItem key="tabBarItem" title="categories" image="ic_recipes_grey" selectedImage="ic_recipes_orange" id="BMP-yC-cQQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJV-kG-iwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,31 +50,30 @@
         <scene sceneID="Wev-6n-0Lo">
             <objects>
                 <viewControllerPlaceholder storyboardName="Favorites" referencedIdentifier="FavorivesSection" id="7wn-wP-0gm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aeh-B5-QLV"/>
+                    <tabBarItem key="tabBarItem" title="favorites" image="ic_favorites_grey" selectedImage="ic_favorites_orange" id="aeh-B5-QLV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsb-iV-KhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2208.695652173913" y="1351.3392857142856"/>
         </scene>
-        <!--ProfileSection-->
-        <scene sceneID="VXl-8w-p7h">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileSection" id="IxI-6E-X1m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="AIF-kM-Jqq"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CNb-rM-lPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2528.985507246377" y="1350.6696428571429"/>
-        </scene>
         <!--AddRecipeSection-->
         <scene sceneID="KTa-Ga-dal">
             <objects>
                 <viewControllerPlaceholder storyboardName="NewRecipe" referencedIdentifier="AddRecipeSection" id="zQb-EG-1Ej" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="J2J-Al-yH8"/>
+                    <tabBarItem key="tabBarItem" title="add recipe" image="plus" catalog="system" selectedImage="plus" id="J2J-Al-yH8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmK-z9-BFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305.79710144927537" y="1304.4642857142856"/>
+            <point key="canvasLocation" x="1070" y="1313"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_favorites_grey" width="18" height="16"/>
+        <image name="ic_favorites_orange" width="18" height="16"/>
+        <image name="ic_home_grey.png" width="18" height="15"/>
+        <image name="ic_home_orange" width="18" height="15"/>
+        <image name="ic_recipes_grey" width="15" height="18"/>
+        <image name="ic_recipes_orange" width="15" height="18"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

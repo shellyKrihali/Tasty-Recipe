@@ -22,7 +22,6 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpProperties()
-        // Do any additional setup after loading the view.
     }
     
     func setUpProperties(){
@@ -61,8 +60,18 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
                 
             }else {
                 print("sign in succesful")
+                print(result!.user.uid)
                 self.transitionToTabBar()
-                
+                Firestore.firestore().collection("users").getDocuments(){
+                    (document,error) in
+                    if error != nil {
+                        print("error loading documents")
+                    } else{
+                        for document in document!.documents{
+                            UserDefaults.standard.setValue(result!.user.uid, forKey: "id")
+                        }
+                    }
+                }
             }
         }
     }
