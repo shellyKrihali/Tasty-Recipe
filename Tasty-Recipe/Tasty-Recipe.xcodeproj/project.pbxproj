@@ -14,7 +14,6 @@
 		830F7157269484B200D84D67 /* RecipeInstructionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830F7155269484B200D84D67 /* RecipeInstructionsCell.swift */; };
 		830F7158269484B200D84D67 /* RecipeInstructionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830F7156269484B200D84D67 /* RecipeInstructionsCell.xib */; };
 		831A7D152691C84600B8DF6E /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A7D142691C84600B8DF6E /* NetworkProcessor.swift */; };
-		8328DFC826944A62002D23C1 /* RecipeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8328DFC726944A62002D23C1 /* RecipeDetail.storyboard */; };
 		8328DFCB26944AA5002D23C1 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328DFCA26944AA5002D23C1 /* RecipeDetailViewController.swift */; };
 		832A83D72691A18900904C09 /* NewRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832A83D52691A18900904C09 /* NewRecipe.storyboard */; };
 		832A83DA2691A37D00904C09 /* NewRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A83D92691A37D00904C09 /* NewRecipeTableViewController.swift */; };
@@ -69,7 +68,6 @@
 		830F7155269484B200D84D67 /* RecipeInstructionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInstructionsCell.swift; sourceTree = "<group>"; };
 		830F7156269484B200D84D67 /* RecipeInstructionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeInstructionsCell.xib; sourceTree = "<group>"; };
 		831A7D142691C84600B8DF6E /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
-		8328DFC726944A62002D23C1 /* RecipeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetail.storyboard; sourceTree = "<group>"; };
 		8328DFCA26944AA5002D23C1 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		832A83D62691A18900904C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Tasty-Recipe/Storyboard/Tasty-Recipe/Base.lproj/NewRecipe.storyboard"; sourceTree = "<group>"; };
 		832A83D92691A37D00904C09 /* NewRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeTableViewController.swift; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 				83688E4F269618B20054D543 /* Category.storyboard */,
 				832A83D52691A18900904C09 /* NewRecipe.storyboard */,
 				83E9E7CA268C9AA000023D2F /* Favorites.storyboard */,
-				8328DFC726944A62002D23C1 /* RecipeDetail.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -381,7 +378,6 @@
 				83688E50269618B20054D543 /* Category.storyboard in Resources */,
 				832A83D72691A18900904C09 /* NewRecipe.storyboard in Resources */,
 				83343908269C1BED00E6F718 /* tasty@2x.png in Resources */,
-				8328DFC826944A62002D23C1 /* RecipeDetail.storyboard in Resources */,
 				83E9E7B1268C82AD00023D2F /* ic_arrow_back.png in Resources */,
 				83E9E7D5268CC7F700023D2F /* RecipeCell.xib in Resources */,
 				8334390A269C1BF400E6F718 /* tasty@3x.png in Resources */,

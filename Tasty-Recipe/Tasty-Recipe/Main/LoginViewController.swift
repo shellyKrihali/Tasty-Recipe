@@ -103,6 +103,12 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             navigationController?.navigationBar.isHidden = false
+            switch textField {
+            case self.emailTextField:
+                self.paasswordTextField.becomeFirstResponder()
+            default:
+                self.paasswordTextField.resignFirstResponder()
+            }
             textField.resignFirstResponder()
             return true
         }

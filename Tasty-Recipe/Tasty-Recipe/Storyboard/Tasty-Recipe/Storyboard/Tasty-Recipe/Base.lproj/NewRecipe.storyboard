@@ -24,11 +24,6 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qy-ey-3c0" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="83" width="334" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42d-Bt-bf1" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
                                     <rect key="frame" x="40" y="144" width="334" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -36,11 +31,6 @@
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="serving for" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOE-z6-a1w" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
                                     <rect key="frame" x="40" y="335" width="334" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="level of coooking" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRT-g2-LYX" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="265" width="334" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -87,16 +77,38 @@
                                     <color key="textColor" systemColor="systemRedColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CnL-E9-Jce">
+                                    <rect key="frame" x="100" y="264" width="215" height="32"/>
+                                    <segments>
+                                        <segment title="EASY"/>
+                                        <segment title="MIDDLE"/>
+                                        <segment title="HARD"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="segmentedSectionTapped:" destination="YkX-ic-10U" eventType="valueChanged" id="FUP-uu-iVI"/>
+                                    </connections>
+                                </segmentedControl>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-Jy-xaY">
+                                    <rect key="frame" x="8" y="86" width="398" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="APPETIZER"/>
+                                        <segment title="BREAKFAST &amp; LUNCH"/>
+                                        <segment title="DESSERT"/>
+                                        <segment title="BEVREGES"/>
+                                        <segment title="MAIN DISH"/>
+                                        <segment title="PASTA"/>
+                                        <segment title="SALAD"/>
+                                        <segment title="SOUP"/>
+                                    </segments>
+                                </segmentedControl>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="0qy-ey-3c0" firstAttribute="top" relation="lessThanOrEqual" secondItem="ym9-d4-Zpj" secondAttribute="bottom" constant="27" id="2RW-rN-Kq5"/>
+                                <constraint firstItem="42d-Bt-bf1" firstAttribute="top" secondItem="ym9-d4-Zpj" secondAttribute="bottom" constant="88" id="15w-Ee-AkK"/>
                                 <constraint firstItem="42d-Bt-bf1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="5Yc-kT-sXj"/>
                                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="287" id="6Hx-MS-alY"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="7fG-QN-jXU"/>
-                                <constraint firstItem="fRT-g2-LYX" firstAttribute="top" relation="lessThanOrEqual" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="27" id="BTa-Ik-Y78"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ROU-4a-cno" secondAttribute="trailing" constant="40" id="CqK-mE-boF"/>
-                                <constraint firstItem="fRT-g2-LYX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="EmQ-WO-cW1"/>
-                                <constraint firstItem="WOE-z6-a1w" firstAttribute="top" relation="lessThanOrEqual" secondItem="fRT-g2-LYX" secondAttribute="bottom" constant="36" id="KoS-Ks-kmK"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="trailing" constant="40" id="NWC-tG-kN0"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="g0F-Ug-93q" secondAttribute="trailing" constant="40" id="OAP-rr-VHN"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="OV9-JG-HQg"/>
@@ -104,18 +116,16 @@
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="SuY-QU-ZKh"/>
                                 <constraint firstItem="G3P-qd-SIT" firstAttribute="top" relation="lessThanOrEqual" secondItem="WOE-z6-a1w" secondAttribute="bottom" constant="32" id="TES-uB-OoU"/>
                                 <constraint firstItem="ym9-d4-Zpj" firstAttribute="top" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="top" constant="22" id="UA3-9J-2Hf"/>
-                                <constraint firstItem="WOE-z6-a1w" firstAttribute="top" relation="lessThanOrEqual" secondItem="fRT-g2-LYX" secondAttribute="bottom" constant="36" id="Vy7-bT-Zsg"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="trailing" constant="40" id="VzQ-FI-vmX"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="112" id="WxG-yw-opO"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Aj-Jb-8cA" secondAttribute="bottom" constant="23.5" id="YhU-31-NeU"/>
+                                <constraint firstItem="CnL-E9-Jce" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="69" id="aCF-Ha-o29"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="bQG-PZ-18A"/>
                                 <constraint firstItem="WOE-z6-a1w" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="dQv-8v-iR0"/>
-                                <constraint firstItem="0qy-ey-3c0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="dRy-XU-qG6"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="fpI-Sh-2kA"/>
                                 <constraint firstItem="ROU-4a-cno" firstAttribute="top" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="bottom" constant="26" id="fpO-tV-HRc"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="gNN-lB-5gg"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="G3P-qd-SIT" secondAttribute="trailing" constant="40" id="h2h-Df-UOU"/>
-                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="fRT-g2-LYX" secondAttribute="trailing" constant="40" id="h85-b2-PbO"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Aj-Jb-8cA" secondAttribute="bottom" constant="23.5" id="h9c-LM-7xm"/>
                                 <constraint firstItem="ym9-d4-Zpj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="ix2-US-0Fd"/>
                                 <constraint firstItem="6Aj-Jb-8cA" firstAttribute="top" relation="lessThanOrEqual" secondItem="G3P-qd-SIT" secondAttribute="bottom" constant="59" id="kKh-HQ-KnA"/>
@@ -125,13 +135,13 @@
                                 <constraint firstItem="ROU-4a-cno" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="oQW-Nf-Nr5"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="p5O-rz-LMv"/>
                                 <constraint firstItem="6Aj-Jb-8cA" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="60" id="qOf-0j-mwX"/>
-                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0qy-ey-3c0" secondAttribute="trailing" constant="40" id="qnN-rd-l3O"/>
+                                <constraint firstItem="ROU-4a-cno" firstAttribute="top" secondItem="Ies-LN-NMw" secondAttribute="top" constant="204" id="qtM-H0-aAA"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="trailing" constant="112" id="r29-FL-qUk"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ym9-d4-Zpj" secondAttribute="trailing" constant="40" id="r6T-3V-tnZ"/>
-                                <constraint firstItem="42d-Bt-bf1" firstAttribute="top" relation="lessThanOrEqual" secondItem="0qy-ey-3c0" secondAttribute="bottom" constant="27" id="uen-9K-syd"/>
+                                <constraint firstItem="ROU-4a-cno" firstAttribute="centerX" secondItem="CnL-E9-Jce" secondAttribute="centerX" id="rw5-wH-MAv"/>
+                                <constraint firstItem="WOE-z6-a1w" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="97" id="s0c-Y9-3nJ"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WOE-z6-a1w" secondAttribute="trailing" constant="40" id="vbd-ME-e8L"/>
                                 <constraint firstItem="ROU-4a-cno" firstAttribute="top" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="bottom" constant="26" id="y9W-ls-pRi"/>
-                                <constraint firstItem="fRT-g2-LYX" firstAttribute="top" relation="lessThanOrEqual" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="27" id="zfL-3y-dYf"/>
                             </constraints>
                         </view>
                         <connections>
@@ -141,14 +151,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add New Recipe" id="GBb-Le-k2M"/>
                     <connections>
-                        <outlet property="categoryTextField" destination="0qy-ey-3c0" id="mvP-Ya-5nh"/>
                         <outlet property="createNewRecipeButton" destination="g0F-Ug-93q" id="Cw4-KD-eaO"/>
                         <outlet property="errorLabel" destination="Fn9-ay-JMj" id="Sta-2R-kPP"/>
                         <outlet property="ingredientsTextField" destination="42d-Bt-bf1" id="w9q-d3-rJP"/>
                         <outlet property="instructionsTextField" destination="ROU-4a-cno" id="K6h-fh-CXc"/>
-                        <outlet property="levelOfCookingTextField" destination="fRT-g2-LYX" id="hOF-ar-SVs"/>
                         <outlet property="nameTextField" destination="ym9-d4-Zpj" id="q5J-XH-MCy"/>
                         <outlet property="newImageSelect" destination="6Aj-Jb-8cA" id="MR4-2T-euu"/>
+                        <outlet property="segmentedCategories" destination="ZAh-Jy-xaY" id="rbh-15-oOM"/>
+                        <outlet property="segmentedLevelOfCooking" destination="CnL-E9-Jce" id="BDx-jh-A3v"/>
                         <outlet property="servingTextField" destination="WOE-z6-a1w" id="txv-ax-Mg2"/>
                         <outlet property="timeInMinTextField" destination="G3P-qd-SIT" id="dK4-mk-LDF"/>
                         <outlet property="uploadImageButton" destination="fJZ-hv-BWt" id="lGQ-0Z-Zuc"/>

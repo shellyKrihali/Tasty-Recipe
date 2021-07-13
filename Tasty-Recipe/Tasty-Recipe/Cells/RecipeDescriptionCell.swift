@@ -12,7 +12,10 @@ class RecipeDescriptionCell: UITableViewCell {
     
     var currentRecipe = Recipe()
     var hasFavoritePressedAlready : Bool = false
+    let manager = Manager()
+
     @IBOutlet weak var recipeNameDes: UILabel!
+    
     @IBOutlet weak var recipeImageDes: UIImageView!
     
     @IBOutlet weak var recipeLevelOfCookingDes: UILabel!
@@ -27,27 +30,22 @@ class RecipeDescriptionCell: UITableViewCell {
         super.awakeFromNib()
         
         heartButton.frame = CGRect(x: 0, y:0, width: 50, height: 50)
-        heartButton.tintColor = .red
         heartButton.addTarget(self, action: #selector(handleMarkAsFavorite), for: .touchUpInside)
         
     }
     @objc private func handleMarkAsFavorite(){
-        let manager = Manager()
         manager.loadFavoriteStatus(recipe: currentRecipe){ flag in
-            print(flag)
-            self.hasFavoritePressedAlready = flag
-            manager.loadRecipeToFavorites(recipe: self.currentRecipe)
-            if(!self.hasFavoritePressedAlready){
+            self.manager.loadRecipeToFavorites(recipe: self.currentRecipe)
+            if(!flag){
                 //paint red
                 self.heartButton.setImage(UIImage(named: "ic_favorites_orange.png"), for: .normal)
-                manager.loadRecipeToFavorites(recipe: self.currentRecipe)
-                self.hasFavoritePressedAlready = true
+                self.manager.loadRecipeToFavorites(recipe: self.currentRecipe)
                 self.reloadInputViews()
             }else{
                 //paint gray
                 self.heartButton.setImage(UIImage(named: "ic_favorites_grey.png"), for: .normal)
-                manager.removeRecipeFromFavorites(recipe: self.currentRecipe)
-                self.reloadInputViews()
+                self.manager.removeRecipeFromFavorites(recipe: self.currentRecipe)
+                self.reloadInputViews()//maybe thats the bug
             }
         }
             
@@ -59,6 +57,16 @@ class RecipeDescriptionCell: UITableViewCell {
         self.recipeLevelOfCookingDes.text = recipe.levelOfCooking
         self.recipeServingDes.text = String(recipe.serving!) + " People"
         self.recipeTimetoCookDes.text = String(recipe.timeInMinutes!) + " min"
+        manager.loadFavoriteStatus(recipe: currentRecipe)
+        {
+            flag in
+            if(flag){
+                self.heartButton.setImage(UIImage(named: "ic_favorites_orange.png"), for: .normal)
+            }else{
+                self.heartButton.setImage(UIImage(named: "ic_favorites_grey.png"), for: .normal)
+            }
+        }
+
     }
     func loadImage(recipe: Recipe){
         var downloadedImage = UIImage()
@@ -74,7 +82,7 @@ class RecipeDescriptionCell: UITableViewCell {
         }
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        super.setSelected(selected, animated: true)
 
     }
     

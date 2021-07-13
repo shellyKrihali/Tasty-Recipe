@@ -43,6 +43,7 @@ class Manager{
         let id = UserDefaults.standard.string(forKey: "id")!
         print(id)
         var favoritesArray = [Recipe]()
+        favoritesArray = []
         Firestore.firestore().collection("users").document(id).getDocument(){
             snapshot, error in
             var array : [String] = snapshot!.get("favorites") as! [String]

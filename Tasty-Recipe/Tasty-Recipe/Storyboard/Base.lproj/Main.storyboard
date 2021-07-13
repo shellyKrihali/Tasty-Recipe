@@ -136,7 +136,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iT6-d4-DBH">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="hUg-jz-GUI">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_arrow_back-1" id="hUg-jz-GUI">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="backButtonTapped:" destination="Koy-vz-kYF" id="FRg-a0-rZm"/>
@@ -247,7 +247,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f58-FB-XVZ">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="Nn4-fL-7mK">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_arrow_back-1" id="Nn4-fL-7mK">
                             <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
@@ -295,7 +295,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="ic_arrow_back-1" width="18" height="18"/>
         <image name="tastyLogo" width="186" height="190"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

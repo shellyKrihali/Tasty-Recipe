@@ -11,6 +11,15 @@ class CategoryDetailTableViewController: UITableViewController {
     var recipes : [Recipe] = []
     let manager = Manager()
 
+    
+    @IBOutlet weak var backgroundView: UIView!
+    
+   
+    
+
+    @IBOutlet weak var categoryTitle: UINavigationItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("insidecategoryDetail")
@@ -22,12 +31,36 @@ class CategoryDetailTableViewController: UITableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         let categoryChoice = UserDefaults.standard.string(forKey: "categoryChoice")!
+    //    self.categoryTitle.title = categoryChoice
         manager.loadRecipeByCategory(category: categoryChoice ){
             recipesCategoryArray in
+            
                 self.recipes = recipesCategoryArray
+            if(self.recipes.count == 0){
+            
+            }
+            else{
+                self.backgroundView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+            }
+            
                 self.tableView.reloadData()        }
     }
 
+   
+   /* @IBAction func backButtonTapped(_ sender: Any) {
+        print("here")
+            navigationController?.popViewController(animated: true)
+
+    }
+    */
+    
+ /*   @IBAction func backButtonTapped(_ sender: Any) {
+        print("here")
+            navigationController?.popViewController(animated: true)
+
+    }*/
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,10 +78,9 @@ class CategoryDetailTableViewController: UITableViewController {
         UserDefaults.standard.set(self.recipes[index].instructions, forKey: "instructions")
         UserDefaults.standard.set(self.recipes[index].levelOfCooking, forKey: "levelOfCooking")
         
-        let storyboard :UIStoryboard = UIStoryboard(name: "RecipeDetail", bundle: nil)
-        let recipeDetailViewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController") as! RecipeDetailViewController
-        self.present(recipeDetailViewController, animated: true, completion: nil)
-        
+        navigationController?.navigationBar.backgroundColor = .white
+        self.performSegue(withIdentifier: "RecipeDetailSegueC", sender: self)
+      
         
     }
 

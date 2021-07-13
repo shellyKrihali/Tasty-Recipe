@@ -20,6 +20,9 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var SearchButton: UIBarButtonItem!
     
+    
+    @IBOutlet weak var errorLabel: CustomLabel!
+    @IBOutlet weak var backgroundView: UIView!
     var recipes : [Recipe] = []
     var currentRecipes: [Recipe] = []
     let manager = Manager()
@@ -46,6 +49,11 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidAppear(_ animated: Bool) {
         manager.loadData() { recipesArray in
             self.recipes = recipesArray
+            if(self.recipes.count == 0){
+                
+            }else{
+                self.backgroundView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+            }
             self.currentRecipes = self.recipes
             self.tableView.reloadData()
             for recipe in self.recipes{
@@ -112,10 +120,7 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
         UserDefaults.standard.set(self.currentRecipes[index].ingredients, forKey: "ingredients")
         UserDefaults.standard.set(self.currentRecipes[index].instructions, forKey: "instructions")
         UserDefaults.standard.set(self.currentRecipes[index].levelOfCooking, forKey: "levelOfCooking")
-        
-        let storyboard :UIStoryboard = UIStoryboard(name: "RecipeDetail", bundle: nil)
-        let recipeDetailViewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController") as! RecipeDetailViewController
-        self.present(recipeDetailViewController, animated: true, completion: nil)
+       
         
         
     }
@@ -127,6 +132,8 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
             return 260
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.navigationBar.backgroundColor = .white
+        self.performSegue(withIdentifier: "RecipeDetailH", sender: self)
         openRecipe(index: indexPath.section)
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -136,5 +143,8 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
       
         cell.setUpCell(recipe: self.currentRecipes[indexPath.section])
         return cell
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
     }
 }

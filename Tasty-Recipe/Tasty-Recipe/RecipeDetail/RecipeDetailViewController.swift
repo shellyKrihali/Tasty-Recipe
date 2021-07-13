@@ -43,6 +43,10 @@ class RecipeDetailViewController: UIViewController {
         tbl.delegate = self
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 extension RecipeDetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {

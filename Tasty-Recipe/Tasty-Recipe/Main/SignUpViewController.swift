@@ -101,10 +101,21 @@ extension SignUpViewController {
     func textFieldDidEndEditing(_ textField: UITextField) {
 
     }
+   
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         navigationController?.navigationBar.isHidden = false
-        textField.resignFirstResponder()
+        self.switchBasedNextTextField(textField)
         return true
+    }
+    private func switchBasedNextTextField(_ textField: UITextField) {
+        switch textField {
+        case self.nameTextField:
+            self.emailTextField.becomeFirstResponder()
+        case self.emailTextField:
+            self.passwordTextField.becomeFirstResponder()
+        default:
+            self.passwordTextField.resignFirstResponder()
+        }
     }
     
 }

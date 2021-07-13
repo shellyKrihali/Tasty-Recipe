@@ -36,8 +36,8 @@ class CategoryTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserDefaults.standard.setValue(items[indexPath.row], forKey: "categoryChoice")
-        let categoryDetail = storyboard?.instantiateViewController(identifier: "CategoryDetail")
-        view.window?.rootViewController = categoryDetail
+      /*  let categoryDetail = storyboard?.instantiateViewController(identifier: "CategoryDetail")
+        view.window?.rootViewController = categoryDetail*/
         
     }
 
