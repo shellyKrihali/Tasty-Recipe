@@ -102,7 +102,6 @@ class NewRecipeTableViewController: UITableViewController,UITextFieldDelegate {
                     self.errorLabel.alpha = 1
                    self.errorLabel.text = "Recipe Uploaded Sucessfully"
                 }else{
-                    print("errorrrr")
                 }
            
             

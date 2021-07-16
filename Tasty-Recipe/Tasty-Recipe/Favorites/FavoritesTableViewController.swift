@@ -27,11 +27,9 @@ class FavoritesTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
     manager.loadFavorites() { favoritesArray in
             self.recipes = favoritesArray
-        if(self.recipes.count == 0){
-            //self.errorLabel.text = "No Favorite Recipes Yet..."
-        }else{
+        if(self.recipes.count != 0){
             self.backgroundView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-                }
+        }
             self.tableView.reloadData()
             
         }

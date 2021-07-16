@@ -65,7 +65,6 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
                 print(result!.user.uid)
                 self.transitionToTabBar()
                 UserDefaults.standard.setValue(result!.user.uid, forKey: "id")
-                // p@gmail.com 123456
             }
         }
     }

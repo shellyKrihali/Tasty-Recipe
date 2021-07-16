@@ -14,7 +14,7 @@ class Manager{
     
     func loadRecipeToFavorites(recipe: Recipe){
         let id = UserDefaults.standard.string(forKey: "id")!
-        Firestore.firestore().collection("users").document(id).updateData(["favorites": FieldValue.arrayUnion([recipe.id])])
+        Firestore.firestore().collection("users").document(id).updateData(["favorites": FieldValue.arrayUnion([recipe.id!])])
     
     }
     func loadFavoriteStatus(recipe: Recipe,_ callback:@escaping ((Bool) -> Void)){
@@ -22,7 +22,7 @@ class Manager{
         let id = UserDefaults.standard.string(forKey: "id")!
         Firestore.firestore().collection("users").document(id).getDocument(){
             snapshot, error in
-            var array : [String] = snapshot!.get("favorites") as! [String]
+            let array : [String] = snapshot!.get("favorites") as! [String]
             if(array.contains(recipe.id!)){
                 RunLoop.main.perform{
                     flag = true
@@ -48,7 +48,7 @@ class Manager{
         favoritesArray = []
         Firestore.firestore().collection("users").document(id).getDocument(){
             snapshot, error in
-            var array : [String] = snapshot!.get("favorites") as! [String]
+            let array : [String] = snapshot!.get("favorites") as! [String]
             for item in array{
                 let document = Firestore.firestore().collection("recipes").document(item).getDocument{document,error in
                     
@@ -65,8 +65,6 @@ class Manager{
                 favoritesArray.append(recipe)
                     RunLoop.main.perform{
                         callback(favoritesArray)
-                        print("favoritesArray")
-                        print(favoritesArray)
                     }
                 
                 }
@@ -77,7 +75,7 @@ class Manager{
     func removeRecipeFromFavorites(recipe: Recipe){
         let id = UserDefaults.standard.string(forKey: "id")!
 
-        Firestore.firestore().collection("users").document(id).updateData(["favorites": FieldValue.arrayRemove([recipe.id])]) { err in
+        Firestore.firestore().collection("users").document(id).updateData(["favorites": FieldValue.arrayRemove([recipe.id!])]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
             } else {

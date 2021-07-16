@@ -37,8 +37,7 @@ class RecipeDetailViewController: UIViewController {
         self.timeInMinutes = UserDefaults.standard.integer(forKey: "timeInMinutes")
         self.recipeId = UserDefaults.standard.string(forKey: "recipeId")!
         recipe = Recipe(name: self.name, id: recipeId, levelOfCooking: self.levelOfCooking, category: self.category, timeInMinutes: self.timeInMinutes, ingredients: self.ingredients, image: self.image, instructions: self.instructions, serving: self.serving)
-        view.backgroundColor = .clear
-        tbl.tableFooterView = UIView(frame: .zero)
+
         tbl.register(UINib.init(nibName: "RecipeDescriptionCell", bundle: nil), forCellReuseIdentifier: "RecipeDescriptionCell")
         tbl.register(UINib.init(nibName: "RecipeIngredientsCell", bundle: nil), forCellReuseIdentifier: "RecipeIngredientsCell")
         tbl.register(UINib.init(nibName: "RecipeInstructionsCell", bundle: nil), forCellReuseIdentifier: "RecipeInstructionsCell")

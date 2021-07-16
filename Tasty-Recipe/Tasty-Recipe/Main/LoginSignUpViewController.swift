@@ -11,7 +11,9 @@ class LoginSignUpViewController: UIViewController {
 
     //UI view properties
     @IBOutlet weak var dontHaveAccountLabel: CustomLabel!
+    
     @IBOutlet weak var loginButton: CustomButton!
+    
     @IBOutlet weak var signupButton: CustomButton!
     
     @IBOutlet weak var TastyLabel: CustomLabel!

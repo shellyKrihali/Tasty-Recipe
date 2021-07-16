@@ -10,12 +10,8 @@ import UIKit
 class CategoryDetailTableViewController: UITableViewController {
     var recipes : [Recipe] = []
     let manager = Manager()
-
     
     @IBOutlet weak var backgroundView: UIView!
-    
-   
-    
 
     @IBOutlet weak var categoryTitle: UINavigationItem!
     
@@ -24,8 +20,6 @@ class CategoryDetailTableViewController: UITableViewController {
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
         self.clearsSelectionOnViewWillAppear = true
-
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         let categoryChoice = UserDefaults.standard.string(forKey: "categoryChoice")!
@@ -41,23 +35,13 @@ class CategoryDetailTableViewController: UITableViewController {
                 self.backgroundView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
             }
             
-                self.tableView.reloadData()        }
+                self.tableView.reloadData()
+            
+        }
     }
 
    
-   /* @IBAction func backButtonTapped(_ sender: Any) {
-        print("here")
-            navigationController?.popViewController(animated: true)
 
-    }
-    */
-    
- /*   @IBAction func backButtonTapped(_ sender: Any) {
-        print("here")
-            navigationController?.popViewController(animated: true)
-
-    }*/
-    
     
     // MARK: - Table view data source
 

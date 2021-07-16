@@ -11,7 +11,9 @@ class RecipeCell: UITableViewCell {
 
     
     @IBOutlet weak var recipeNameLabel: UILabel!
+    
     @IBOutlet weak var recipeImage: UIImageView!
+    
     @IBOutlet weak var timetocookLabel: UILabel!
     
     @IBOutlet weak var levelOfCookingLabel: UILabel!
@@ -21,7 +23,6 @@ class RecipeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

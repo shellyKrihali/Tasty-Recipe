@@ -11,7 +11,6 @@ class RecipeDescriptionCell: UITableViewCell {
 
     
     var currentRecipe = Recipe()
-    var hasFavoritePressedAlready : Bool = false
     let manager = Manager()
 
     @IBOutlet weak var recipeNameDes: UILabel!
@@ -22,6 +21,7 @@ class RecipeDescriptionCell: UITableViewCell {
     
     
     @IBOutlet weak var recipeTimetoCookDes: UILabel!
+    
     @IBOutlet weak var recipeServingDes: UILabel!
     
     
@@ -44,11 +44,10 @@ class RecipeDescriptionCell: UITableViewCell {
             }else{
                 //paint gray
                 self.heartButton.setImage(UIImage(named: "ic_favorites_grey.png"), for: .normal)
+                //if recipes.count == 1, remove and put no recipes yet view
                 self.manager.removeRecipeFromFavorites(recipe: self.currentRecipe)
-                self.manager.loadFavorites(){_ in
-                    
-                }
-                self.reloadInputViews()//maybe thats the bug
+                
+                self.reloadInputViews()
             }
         }
             
