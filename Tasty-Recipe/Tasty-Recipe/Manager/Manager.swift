@@ -9,7 +9,9 @@ import Foundation
 import FirebaseFirestore
 class Manager{
     var recipeCollectionRef: CollectionReference!
-
+    
+     
+    
     func loadRecipeToFavorites(recipe: Recipe){
         let id = UserDefaults.standard.string(forKey: "id")!
         Firestore.firestore().collection("users").document(id).updateData(["favorites": FieldValue.arrayUnion([recipe.id])])
@@ -63,6 +65,8 @@ class Manager{
                 favoritesArray.append(recipe)
                     RunLoop.main.perform{
                         callback(favoritesArray)
+                        print("favoritesArray")
+                        print(favoritesArray)
                     }
                 
                 }

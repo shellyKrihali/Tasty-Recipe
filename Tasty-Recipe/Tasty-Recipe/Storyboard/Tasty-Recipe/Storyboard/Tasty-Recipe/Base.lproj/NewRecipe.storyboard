@@ -78,7 +78,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CnL-E9-Jce">
-                                    <rect key="frame" x="100" y="264" width="215" height="32"/>
+                                    <rect key="frame" x="191" y="259" width="215" height="32"/>
                                     <segments>
                                         <segment title="EASY"/>
                                         <segment title="MIDDLE"/>
@@ -102,6 +102,13 @@
                                         <segment title="SOUP"/>
                                     </segments>
                                 </segmentedControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level of Cooking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-b1-NYo">
+                                    <rect key="frame" x="40" y="269" width="132" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="42d-Bt-bf1" firstAttribute="top" secondItem="ym9-d4-Zpj" secondAttribute="bottom" constant="88" id="15w-Ee-AkK"/>

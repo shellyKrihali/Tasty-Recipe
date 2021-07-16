@@ -8,17 +8,14 @@
 import UIKit
 import Firebase
 class CategoryTableViewController: UITableViewController {
-
-    static var recipeCollectionRef: CollectionReference!
-
-    let items = ["APPETIZER","BREAKFAST & LUNCH", "DESSERT", "BEVREGES", "MAIN DISH", "PASTA","SALAD", "SOUP"]
-   
+    
+    
+    let items = Constants.categories
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         self.tableView.reloadData()
-        }
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -31,21 +28,10 @@ class CategoryTableViewController: UITableViewController {
         return categoryCell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 80
+        return 80
         
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UserDefaults.standard.setValue(items[indexPath.row], forKey: "categoryChoice")
-      /*  let categoryDetail = storyboard?.instantiateViewController(identifier: "CategoryDetail")
-        view.window?.rootViewController = categoryDetail*/
-        
     }
-
-      
-    }
-    
-
-        
-        
-    
-
+}

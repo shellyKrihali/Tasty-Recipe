@@ -11,12 +11,15 @@ import FirebaseFirestore
 class SignUpViewController: UIViewController,UITextFieldDelegate {
 
     
-   
+    
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var nameTextField: CustomTextField!
+    
+    
+    @IBOutlet weak var emailTextField: CustomTextField!
     
     @IBOutlet weak var passwordTextField: CustomTextField!
     
-    @IBOutlet weak var emailTextField: CustomTextField!
     
     
     @IBOutlet weak var signUpButton: CustomButton!
@@ -28,7 +31,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.alpha = 0
-
+        passwordTextField.isSecureTextEntry = true
     }
     //pops current view controller
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -66,18 +69,16 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
                 //check for errors
                 if (err != nil) {
                     self.showError("Error Creating User")
-                    
                 }
                 else {
                     let db = Firestore.firestore()
                     db.collection("users").document(result!.user.uid).setData(
                         ["id": result!.user.uid,"name":name,"uid": result!.user.uid, "favorites": []]
                     )
+                    UserDefaults.standard.setValue(result!.user.uid, forKey: "id")
                     self.transitionToTabBar()
                 }
             }
-            
-            
         }
         
         
@@ -97,14 +98,16 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
 extension SignUpViewController {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         navigationController?.navigationBar.isHidden = true
+        topConstraint.constant = CGFloat(10)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-
+        topConstraint.constant = CGFloat(100)
     }
    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         navigationController?.navigationBar.isHidden = false
         self.switchBasedNextTextField(textField)
+        topConstraint.constant = CGFloat(100)
         return true
     }
     private func switchBasedNextTextField(_ textField: UITextField) {

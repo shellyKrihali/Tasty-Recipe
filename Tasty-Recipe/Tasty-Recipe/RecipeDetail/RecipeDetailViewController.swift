@@ -24,6 +24,9 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var tbl: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.modalPresentationStyle = .fullScreen
+        self.tabBarController?.tabBar.barTintColor = .white
         self.name = UserDefaults.standard.string(forKey: "name")!
         self.image = UserDefaults.standard.string(forKey: "image")!
         self.ingredients = UserDefaults.standard.string(forKey: "ingredients")!
@@ -84,7 +87,7 @@ extension RecipeDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tbl.frame.size.width, height: 50))
-        view.backgroundColor = .systemOrange
+        view.backgroundColor = UIColor(red: 255/255, green: 213/255, blue: 128/255, alpha: 1)
         let titleLabel = UILabel(frame: view.frame)
         titleLabel.textColor = .white
         titleLabel.textAlignment = .center

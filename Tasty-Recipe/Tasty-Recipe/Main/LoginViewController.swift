@@ -10,14 +10,19 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class LoginViewController: UIViewController , UITextFieldDelegate{
-
+    
     //UI view properties
     @IBOutlet weak var emailTextField: UITextField!
+    
     @IBOutlet weak var paasswordTextField: UITextField!
+    
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var loginButton: CustomButton!
     
     @IBOutlet weak var errorLabel: CustomLabel!
+    
+    let manager = Manager()
     //first load func
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +32,7 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
     func setUpProperties(){
         navigationController?.navigationBar.layer.frame.origin.y = 22
         errorLabel.alpha = 0
-
+        paasswordTextField.isSecureTextEntry = true
     }
     
     //pops current view controller
@@ -40,13 +45,12 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         return true
     }
     
-    
     @IBAction func LoginButtonTapped(_ sender: Any) {
         // validate text fields
         let error = validateFields()
         
         if (error != nil){
-           showError(error!)
+            showError(error!)
         }
         //create clean version of the text fields
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -55,23 +59,13 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if (error != nil){
                 self.showError(error!.localizedDescription)
-                print(error!.localizedDescription)
-                //stay in login 
                 
             }else {
                 print("sign in succesful")
                 print(result!.user.uid)
                 self.transitionToTabBar()
-                Firestore.firestore().collection("users").getDocuments(){
-                    (document,error) in
-                    if error != nil {
-                        print("error loading documents")
-                    } else{
-                        for document in document!.documents{
-                            UserDefaults.standard.setValue(result!.user.uid, forKey: "id")
-                        }
-                    }
-                }
+                UserDefaults.standard.setValue(result!.user.uid, forKey: "id")
+                // p@gmail.com 123456
             }
         }
     }
@@ -93,25 +87,27 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         return nil
         
     }}
-    //textfield slides up
-    extension LoginViewController {
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            navigationController?.navigationBar.isHidden = true
-        }
-        func textFieldDidEndEditing(_ textField: UITextField) {
-        }
-        
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            navigationController?.navigationBar.isHidden = false
-            switch textField {
-            case self.emailTextField:
-                self.paasswordTextField.becomeFirstResponder()
-            default:
-                self.paasswordTextField.resignFirstResponder()
-            }
-            textField.resignFirstResponder()
-            return true
-        }
-        
+ // textfield slides up
+extension LoginViewController {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        topConstraint.constant = CGFloat(40)
+        navigationController?.navigationBar.isHidden = true
     }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        topConstraint.constant = CGFloat(101)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        navigationController?.navigationBar.isHidden = false
+        switch textField {
+        case self.emailTextField:
+            self.paasswordTextField.becomeFirstResponder()
+        default:
+            self.paasswordTextField.resignFirstResponder()
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
 

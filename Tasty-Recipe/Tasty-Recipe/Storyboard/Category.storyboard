@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="-88.405797101449281" y="2368.5267857142858"/>
         </scene>
-        <!--Category Detail Table View Controller-->
+        <!--categoryname-->
         <scene sceneID="1fe-vU-9AH">
             <objects>
                 <tableViewController storyboardIdentifier="CategoryDetail" id="RHP-Mh-vmU" customClass="CategoryDetailTableViewController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,9 +109,10 @@
                             <outlet property="delegate" destination="RHP-Mh-vmU" id="ZCN-UD-PJf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1zr-jh-4S4"/>
+                    <navigationItem key="navigationItem" title="categoryname" id="1zr-jh-4S4"/>
                     <connections>
                         <outlet property="backgroundView" destination="Ovk-1W-w7V" id="dfm-51-vwU"/>
+                        <outlet property="categoryTitle" destination="1zr-jh-4S4" id="aST-3i-fn8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEY-r6-Mmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,7 +122,6 @@
         <!--Categories-->
         <scene sceneID="Jq7-7t-uRz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jd0-Ga-guR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="CategorySection" automaticallyAdjustsScrollViewInsets="NO" id="tlU-PH-ib3" customClass="CustomNavigationController" customModule="Tasty_Recipe" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Categories" image="ic_recipes_grey" selectedImage="ic_recipes_orange" id="rod-ss-yMz"/>
                     <toolbarItems/>
@@ -135,6 +135,7 @@
                         <segue destination="pys-Z9-24U" kind="relationship" relationship="rootViewController" id="oxQ-xD-lGu"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jd0-Ga-guR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="562" y="1625"/>
         </scene>

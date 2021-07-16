@@ -19,10 +19,8 @@ class CategoryDetailTableViewController: UITableViewController {
 
     @IBOutlet weak var categoryTitle: UINavigationItem!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("insidecategoryDetail")
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
         self.clearsSelectionOnViewWillAppear = true
@@ -31,7 +29,7 @@ class CategoryDetailTableViewController: UITableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         let categoryChoice = UserDefaults.standard.string(forKey: "categoryChoice")!
-    //    self.categoryTitle.title = categoryChoice
+        self.categoryTitle.title = categoryChoice
         manager.loadRecipeByCategory(category: categoryChoice ){
             recipesCategoryArray in
             
@@ -69,7 +67,6 @@ class CategoryDetailTableViewController: UITableViewController {
     func openRecipe(index: Int){
         UserDefaults.standard.set(self.recipes[index].name, forKey: "name")
         UserDefaults.standard.set(self.recipes[index].id, forKey: "recipeId")
-
         UserDefaults.standard.set(self.recipes[index].timeInMinutes, forKey: "timeInMinutes")
         UserDefaults.standard.set(self.recipes[index].serving, forKey: "serving")
         UserDefaults.standard.set(self.recipes[index].image, forKey: "image")
@@ -80,7 +77,7 @@ class CategoryDetailTableViewController: UITableViewController {
         
         navigationController?.navigationBar.backgroundColor = .white
         self.performSegue(withIdentifier: "RecipeDetailSegueC", sender: self)
-      
+        self.modalPresentationStyle = .fullScreen
         
     }
 

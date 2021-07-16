@@ -25,7 +25,6 @@
 		83343910269C2D6A00E6F718 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8334390E269C2D6A00E6F718 /* CategoryCell.xib */; };
 		834B43DC268B34C50080B4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43DB268B34C50080B4A7 /* AppDelegate.swift */; };
 		834B43DE268B34C50080B4A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43DD268B34C50080B4A7 /* SceneDelegate.swift */; };
-		834B43E3268B34C50080B4A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834B43E1268B34C50080B4A7 /* Main.storyboard */; };
 		834B43E8268B34C60080B4A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834B43E6268B34C60080B4A7 /* LaunchScreen.storyboard */; };
 		834B43F1268B3D830080B4A7 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F0268B3D830080B4A7 /* CustomColor.swift */; };
 		834B43F4268B44560080B4A7 /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43F3268B44560080B4A7 /* LoginSignUpViewController.swift */; };
@@ -40,6 +39,7 @@
 		83688E4C2695E93A0054D543 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83688E4B2695E93A0054D543 /* Manager.swift */; };
 		83688E50269618B20054D543 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83688E4F269618B20054D543 /* Category.storyboard */; };
 		83688E5426962CCA0054D543 /* CategoryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83688E5326962CCA0054D543 /* CategoryDetailTableViewController.swift */; };
+		83CAF6C626A18C9500B3F94E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CAF6C526A18C9500B3F94E /* Main.storyboard */; };
 		83CFBB5726910DA0002558B4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CFBB5626910DA0002558B4 /* Constans.swift */; };
 		83E329A9268C5DFD00F0846D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329A8268C5DFD00F0846D /* LoginViewController.swift */; };
 		83E329AB268C668700F0846D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E329AA268C668700F0846D /* CustomTextField.swift */; };
@@ -80,7 +80,6 @@
 		834B43D8268B34C50080B4A7 /* Tasty-Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tasty-Recipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		834B43DB268B34C50080B4A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834B43DD268B34C50080B4A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		834B43E2268B34C50080B4A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		834B43E7268B34C60080B4A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		834B43E9268B34C60080B4A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		834B43F0268B3D830080B4A7 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		83688E4B2695E93A0054D543 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		83688E4F269618B20054D543 /* Category.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		83688E5326962CCA0054D543 /* CategoryDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailTableViewController.swift; sourceTree = "<group>"; };
+		83CAF6C526A18C9500B3F94E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		83CFBB5626910DA0002558B4 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		83E329A8268C5DFD00F0846D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83E329AA268C668700F0846D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 		83E9E7C2268C980A00023D2F /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				834B43E1268B34C50080B4A7 /* Main.storyboard */,
+				83CAF6C526A18C9500B3F94E /* Main.storyboard */,
 				83E9E7BF268C95ED00023D2F /* TapBarMenu.storyboard */,
 				83E9E7C3268C986D00023D2F /* Home.storyboard */,
 				83688E4F269618B20054D543 /* Category.storyboard */,
@@ -379,13 +379,13 @@
 				832A83D72691A18900904C09 /* NewRecipe.storyboard in Resources */,
 				83343908269C1BED00E6F718 /* tasty@2x.png in Resources */,
 				83E9E7B1268C82AD00023D2F /* ic_arrow_back.png in Resources */,
+				83CAF6C626A18C9500B3F94E /* Main.storyboard in Resources */,
 				83E9E7D5268CC7F700023D2F /* RecipeCell.xib in Resources */,
 				8334390A269C1BF400E6F718 /* tasty@3x.png in Resources */,
 				830F715026946CDC00D84D67 /* RecipeDescriptionCell.xib in Resources */,
 				83E9E7C1268C95ED00023D2F /* TapBarMenu.storyboard in Resources */,
 				8354F9B7268F21D5007C8AA7 /* GoogleService-Info.plist in Resources */,
 				830F7158269484B200D84D67 /* RecipeInstructionsCell.xib in Resources */,
-				834B43E3268B34C50080B4A7 /* Main.storyboard in Resources */,
 				83E9E7C5268C986D00023D2F /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,14 +436,6 @@
 				832A83D62691A18900904C09 /* Base */,
 			);
 			name = NewRecipe.storyboard;
-			sourceTree = "<group>";
-		};
-		834B43E1268B34C50080B4A7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				834B43E2268B34C50080B4A7 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		834B43E6268B34C60080B4A7 /* LaunchScreen.storyboard */ = {
@@ -602,7 +594,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Tasty-Recipe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,6 +604,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guy.test.Tasty-Recipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -620,7 +615,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Tasty-Recipe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,6 +625,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guy.test.Tasty-Recipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

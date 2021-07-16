@@ -20,7 +20,7 @@ class FavoritesTableViewController: UITableViewController {
 
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
- 
+       
         self.clearsSelectionOnViewWillAppear = true
         
     }
@@ -45,16 +45,13 @@ class FavoritesTableViewController: UITableViewController {
         UserDefaults.standard.set(self.recipes[index].ingredients, forKey: "ingredients")
         UserDefaults.standard.set(self.recipes[index].instructions, forKey: "instructions")
         UserDefaults.standard.set(self.recipes[index].levelOfCooking, forKey: "levelOfCooking")
-        
       
-       
     }
     // MARK: - Table view data source
 }
 extension FavoritesTableViewController{
     override func numberOfSections(in tableView: UITableView) -> Int {
-      
-        return recipes.count
+         return recipes.count
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.navigationBar.backgroundColor = .white

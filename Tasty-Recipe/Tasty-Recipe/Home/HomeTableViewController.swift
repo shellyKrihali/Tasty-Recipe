@@ -91,8 +91,10 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
     @IBAction func LogOutButtonTapped(_ sender: Any) {
         UserDefaults.standard.set("", forKey: "id")
         let storyboard :UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginSignUpVC = storyboard.instantiateViewController(withIdentifier: "loginSignUpViewController") as! LoginSignUpViewController
-        self.present(loginSignUpVC, animated: true, completion: nil)
+        let loginSignUpNC = storyboard.instantiateViewController(withIdentifier: "MainNavController") as! UINavigationController
+       
+        loginSignUpNC.modalPresentationStyle = .fullScreen
+        self.present(loginSignUpNC, animated: true, completion: nil)
         
         let firebaseAuth = Auth.auth()
         do {
@@ -112,7 +114,6 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
     func openRecipe(index: Int){
         UserDefaults.standard.set(self.currentRecipes[index].name, forKey: "name")
         UserDefaults.standard.set(self.currentRecipes[index].id, forKey: "recipeId")
-
         UserDefaults.standard.set(self.currentRecipes[index].timeInMinutes, forKey: "timeInMinutes")
         UserDefaults.standard.set(self.currentRecipes[index].serving, forKey: "serving")
         UserDefaults.standard.set(self.currentRecipes[index].image, forKey: "image")
@@ -133,6 +134,7 @@ class HomeTableViewController: UITableViewController, UISearchBarDelegate {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.navigationBar.backgroundColor = .white
+        
         self.performSegue(withIdentifier: "RecipeDetailH", sender: self)
         openRecipe(index: indexPath.section)
     }

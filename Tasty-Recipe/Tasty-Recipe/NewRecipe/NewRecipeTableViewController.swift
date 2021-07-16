@@ -14,12 +14,9 @@ class NewRecipeTableViewController: UITableViewController,UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: CustomTextField!
     
- 
-    
     @IBOutlet weak var ingredientsTextField: CustomTextField!
     
     @IBOutlet weak var servingTextField: CustomTextField!
-    
     
     @IBOutlet weak var instructionsTextField: CustomTextField!
     
@@ -29,11 +26,10 @@ class NewRecipeTableViewController: UITableViewController,UITextFieldDelegate {
     
     @IBOutlet weak var uploadImageButton: CustomButton!
     
-    
     @IBOutlet weak var createNewRecipeButton: CustomButton!
-    
-    
+   
     @IBOutlet weak var segmentedCategories: UISegmentedControl!
+    
     @IBOutlet weak var segmentedLevelOfCooking: UISegmentedControl!
     
     @IBOutlet weak var errorLabel: UILabel!
@@ -60,7 +56,7 @@ class NewRecipeTableViewController: UITableViewController,UITextFieldDelegate {
         }else{
             let id = UUID().uuidString
             let name = nameTextField.text
-            let categories = ["APPETIZER", "BREAKFAST & LUNCH", "DESSERT", "BEVREGES", "MAIN DISH", "PASTA", "SALAD", "SOUP"]
+            let categories = Constants.categories
             let category = categories[self.segmentedCategories.selectedSegmentIndex]
             let ingredients = ingredientsTextField.text
             let instructions = instructionsTextField.text

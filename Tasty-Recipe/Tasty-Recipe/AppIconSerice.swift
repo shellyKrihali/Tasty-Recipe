@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 class AppIconService{
     let application = UIApplication.shared
-    /*enum AppIcon: String{
-        case AppIcons
-    }*/
+    
     func changeAppIcon(){
         application.setAlternateIconName("AppIcons")
     }

@@ -28,7 +28,7 @@ class RecipeDescriptionCell: UITableViewCell {
     @IBOutlet weak var heartButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        heartButton.imageEdgeInsets = UIEdgeInsets(top: 30,left: 30,bottom: 30,right: 30)
         heartButton.frame = CGRect(x: 0, y:0, width: 50, height: 50)
         heartButton.addTarget(self, action: #selector(handleMarkAsFavorite), for: .touchUpInside)
         
@@ -45,6 +45,9 @@ class RecipeDescriptionCell: UITableViewCell {
                 //paint gray
                 self.heartButton.setImage(UIImage(named: "ic_favorites_grey.png"), for: .normal)
                 self.manager.removeRecipeFromFavorites(recipe: self.currentRecipe)
+                self.manager.loadFavorites(){_ in
+                    
+                }
                 self.reloadInputViews()//maybe thats the bug
             }
         }

@@ -17,14 +17,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpK-fL-KKG">
-                        <rect key="frame" x="10" y="12" width="300" height="105"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpK-fL-KKG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ZpK-fL-KKG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Plr-HT-Ucw"/>
+                    <constraint firstItem="ZpK-fL-KKG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eXu-Lw-W2i"/>
+                    <constraint firstAttribute="bottom" secondItem="ZpK-fL-KKG" secondAttribute="bottom" id="oJW-99-Vsb"/>
+                    <constraint firstAttribute="trailing" secondItem="ZpK-fL-KKG" secondAttribute="trailing" id="rsG-rU-5u6"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
