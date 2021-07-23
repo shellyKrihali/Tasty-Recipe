@@ -14,7 +14,22 @@ class RecipeIngredientsCell: UITableViewCell {
         super.awakeFromNib()
     }
     func setUpCell(ingredients: String){
-        IngredientsLabel.text = ingredients
+        let attributedString = NSMutableAttributedString(string: ingredients)
+
+        // *** Create instance of `NSMutableParagraphStyle`
+        let paragraphStyle = NSMutableParagraphStyle()
+
+        // *** set LineSpacing property in points ***
+        paragraphStyle.lineSpacing = 5 // Whatever line spacing you want in points
+
+        // *** Apply attribute to string ***
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+
+        // *** Set Attributed String to your label **
+        
+        IngredientsLabel.attributedText = attributedString
+        
+        IngredientsLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

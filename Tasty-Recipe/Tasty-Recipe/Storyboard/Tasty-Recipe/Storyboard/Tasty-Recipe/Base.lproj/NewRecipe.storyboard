@@ -77,8 +77,25 @@
                                     <color key="textColor" systemColor="systemRedColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CnL-E9-Jce">
-                                    <rect key="frame" x="191" y="259" width="215" height="32"/>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-Jy-xaY">
+                                    <rect key="frame" x="8" y="86" width="398" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="APPETIZER"/>
+                                        <segment title="MAIN DISH"/>
+                                        <segment title="DESSERT"/>
+                                        <segment title="PASTA"/>
+                                        <segment title="SOUP"/>
+                                    </segments>
+                                </segmentedControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of Cooking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-b1-NYo">
+                                    <rect key="frame" x="40" y="269" width="132" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CnL-E9-Jce">
+                                    <rect key="frame" x="191" y="263" width="206" height="32"/>
                                     <segments>
                                         <segment title="EASY"/>
                                         <segment title="MIDDLE"/>
@@ -88,34 +105,16 @@
                                         <action selector="segmentedSectionTapped:" destination="YkX-ic-10U" eventType="valueChanged" id="FUP-uu-iVI"/>
                                     </connections>
                                 </segmentedControl>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-Jy-xaY">
-                                    <rect key="frame" x="8" y="86" width="398" height="32"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <segments>
-                                        <segment title="APPETIZER"/>
-                                        <segment title="BREAKFAST &amp; LUNCH"/>
-                                        <segment title="DESSERT"/>
-                                        <segment title="BEVREGES"/>
-                                        <segment title="MAIN DISH"/>
-                                        <segment title="PASTA"/>
-                                        <segment title="SALAD"/>
-                                        <segment title="SOUP"/>
-                                    </segments>
-                                </segmentedControl>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level of Cooking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-b1-NYo">
-                                    <rect key="frame" x="40" y="269" width="132" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="42d-Bt-bf1" firstAttribute="top" secondItem="ym9-d4-Zpj" secondAttribute="bottom" constant="88" id="15w-Ee-AkK"/>
+                                <constraint firstItem="CnL-E9-Jce" firstAttribute="leading" secondItem="HV5-b1-NYo" secondAttribute="trailing" constant="19" id="5U2-xm-0aZ"/>
                                 <constraint firstItem="42d-Bt-bf1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="5Yc-kT-sXj"/>
+                                <constraint firstItem="HV5-b1-NYo" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="31" id="5zu-nf-7mn"/>
                                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="287" id="6Hx-MS-alY"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="7fG-QN-jXU"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ROU-4a-cno" secondAttribute="trailing" constant="40" id="CqK-mE-boF"/>
+                                <constraint firstItem="CnL-E9-Jce" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="25" id="FGp-vK-wD7"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="trailing" constant="40" id="NWC-tG-kN0"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="g0F-Ug-93q" secondAttribute="trailing" constant="40" id="OAP-rr-VHN"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="OV9-JG-HQg"/>
@@ -126,9 +125,9 @@
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="trailing" constant="40" id="VzQ-FI-vmX"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="112" id="WxG-yw-opO"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Aj-Jb-8cA" secondAttribute="bottom" constant="23.5" id="YhU-31-NeU"/>
-                                <constraint firstItem="CnL-E9-Jce" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="69" id="aCF-Ha-o29"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="bQG-PZ-18A"/>
                                 <constraint firstItem="WOE-z6-a1w" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="dQv-8v-iR0"/>
+                                <constraint firstItem="HV5-b1-NYo" firstAttribute="leading" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="ddc-yU-y7x"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="fpI-Sh-2kA"/>
                                 <constraint firstItem="ROU-4a-cno" firstAttribute="top" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="bottom" constant="26" id="fpO-tV-HRc"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="gNN-lB-5gg"/>
@@ -145,7 +144,6 @@
                                 <constraint firstItem="ROU-4a-cno" firstAttribute="top" secondItem="Ies-LN-NMw" secondAttribute="top" constant="204" id="qtM-H0-aAA"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="trailing" constant="112" id="r29-FL-qUk"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ym9-d4-Zpj" secondAttribute="trailing" constant="40" id="r6T-3V-tnZ"/>
-                                <constraint firstItem="ROU-4a-cno" firstAttribute="centerX" secondItem="CnL-E9-Jce" secondAttribute="centerX" id="rw5-wH-MAv"/>
                                 <constraint firstItem="WOE-z6-a1w" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="97" id="s0c-Y9-3nJ"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WOE-z6-a1w" secondAttribute="trailing" constant="40" id="vbd-ME-e8L"/>
                                 <constraint firstItem="ROU-4a-cno" firstAttribute="top" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="bottom" constant="26" id="y9W-ls-pRi"/>

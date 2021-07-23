@@ -63,8 +63,7 @@ class NewRecipeTableViewController: UITableViewController,UITextFieldDelegate {
             let levels = ["EASY" ,"MIDDLE", "HARD"]
             let levelOfCooking = levels[self.segmentedLevelOfCooking.selectedSegmentIndex]
             
-            print(category)
-            print(levelOfCooking)
+            
             let timeInMinutes = (timeInMinTextField.text! as NSString).integerValue
             let servingFor = (servingTextField.text! as NSString).integerValue
            
@@ -111,7 +110,6 @@ class NewRecipeTableViewController: UITableViewController,UITextFieldDelegate {
     }
     
     @IBAction func uploadImageTapped(_ sender: Any) {
-        print("inside upload image Tapped")
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
@@ -156,7 +154,6 @@ class NewRecipeTableViewController: UITableViewController,UITextFieldDelegate {
     // MARK: - Table view data source
 
     @IBAction func segmentedSectionTapped(_ sender: Any) {
-        print(segmentedLevelOfCooking.selectedSegmentIndex)
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 0

@@ -61,8 +61,6 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
                 self.showError(error!.localizedDescription)
                 
             }else {
-                print("sign in succesful")
-                print(result!.user.uid)
                 self.transitionToTabBar()
                 UserDefaults.standard.setValue(result!.user.uid, forKey: "id")
             }

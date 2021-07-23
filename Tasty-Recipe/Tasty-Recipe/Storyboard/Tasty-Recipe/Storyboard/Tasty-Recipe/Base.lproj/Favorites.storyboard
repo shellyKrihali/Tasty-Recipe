@@ -53,7 +53,14 @@
                             <outlet property="delegate" destination="pzK-8M-f2l" id="gPM-bQ-6jv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FAVORITES" id="5KC-Lp-Kzf"/>
+                    <navigationItem key="navigationItem" title="FAVORITES" id="5KC-Lp-Kzf">
+                        <barButtonItem key="rightBarButtonItem" image="arrow.clockwise" catalog="system" id="jfD-eU-RVm">
+                            <color key="tintColor" red="1" green="0.59460764710000003" blue="0.07549967296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="refreshTableTapped:" destination="pzK-8M-f2l" id="puh-Q3-U1h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgroundView" destination="isx-cL-zfU" id="vVV-7d-8v8"/>
                         <outlet property="errorLabel" destination="Yc0-cl-FoT" id="kGz-lZ-xza"/>
@@ -120,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="ic_favorites_grey.png" width="18" height="16"/>
         <image name="ic_favorites_orange.png" width="18" height="16"/>
         <systemColor name="labelColor">

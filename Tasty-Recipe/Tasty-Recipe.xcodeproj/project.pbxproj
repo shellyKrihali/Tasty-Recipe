@@ -47,7 +47,6 @@
 		83E9E7A6268C6F6000023D2F /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */; };
 		83E9E7AF268C7E4E00023D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7AE268C7E4E00023D2F /* Assets.xcassets */; };
 		83E9E7B1268C82AD00023D2F /* ic_arrow_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7B0268C82AD00023D2F /* ic_arrow_back.png */; };
-		83E9E7B4268C8C4D00023D2F /* flavor_icons in Resources */ = {isa = PBXBuildFile; fileRef = 83E9E7B3268C8C4D00023D2F /* flavor_icons */; };
 		83E9E7B6268C8FA400023D2F /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7B5268C8FA400023D2F /* HomeTableViewController.swift */; };
 		83E9E7B8268C8FF700023D2F /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7B7268C8FF700023D2F /* CategoryTableViewController.swift */; };
 		83E9E7BA268C904E00023D2F /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9E7B9268C904E00023D2F /* FavoritesTableViewController.swift */; };
@@ -98,7 +97,6 @@
 		83E9E7A5268C6F5F00023D2F /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		83E9E7AE268C7E4E00023D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83E9E7B0268C82AD00023D2F /* ic_arrow_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_back.png; sourceTree = "<group>"; };
-		83E9E7B3268C8C4D00023D2F /* flavor_icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flavor_icons; sourceTree = "<group>"; };
 		83E9E7B5268C8FA400023D2F /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		83E9E7B7268C8FF700023D2F /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		83E9E7B9268C904E00023D2F /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				83E9E7CD268C9C1A00023D2F /* Favorites */,
 				834B43EF268B3D5D0080B4A7 /* Custom */,
 				83E9E7AE268C7E4E00023D2F /* Assets.xcassets */,
-				83E9E7B3268C8C4D00023D2F /* flavor_icons */,
 				834B43DB268B34C50080B4A7 /* AppDelegate.swift */,
 				834B43DD268B34C50080B4A7 /* SceneDelegate.swift */,
 				83E9E7BD268C92E600023D2F /* BigPicture.storyboard */,
@@ -370,7 +367,6 @@
 			files = (
 				83E9E7AF268C7E4E00023D2F /* Assets.xcassets in Resources */,
 				83343910269C2D6A00E6F718 /* CategoryCell.xib in Resources */,
-				83E9E7B4268C8C4D00023D2F /* flavor_icons in Resources */,
 				83E9E7BE268C92E600023D2F /* BigPicture.storyboard in Resources */,
 				834B43E8268B34C60080B4A7 /* LaunchScreen.storyboard in Resources */,
 				83E9E7CC268C9AA000023D2F /* Favorites.storyboard in Resources */,

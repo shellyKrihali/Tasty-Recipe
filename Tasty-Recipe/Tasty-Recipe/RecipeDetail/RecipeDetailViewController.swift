@@ -19,9 +19,15 @@ class RecipeDetailViewController: UIViewController {
     var serving = 0
     var timeInMinutes = 0
     var recipeId = ""
+    let manager = Manager()
     
     var headers = ["Description", "Ingredients", "Instructions"]
+    
     @IBOutlet weak var tbl: UITableView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +51,7 @@ class RecipeDetailViewController: UIViewController {
         tbl.delegate = self
     }
     
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -65,19 +72,21 @@ extension RecipeDetailViewController: UITableViewDataSource {
         if (headers[indexPath.section].contains("Description")){
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeDescriptionCell") as! RecipeDescriptionCell
             cell.setUpCell(recipe!)
+            cell.selectionStyle = .none;
             return cell
         }
         if(headers[indexPath.section].contains("Ingredients")){
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeIngredientsCell") as! RecipeIngredientsCell
             cell.setUpCell(ingredients: (recipe?.ingredients!)!)
+            cell.selectionStyle = .none;
             return cell
         }
         if(headers[indexPath.section].contains("Instructions")){
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeInstructionsCell") as! RecipeInstructionsCell
             cell.setUpCell(instructions: (recipe?.instructions!)!)
+            cell.selectionStyle = .none;
             return cell
         }
-       
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -88,7 +97,7 @@ extension RecipeDetailViewController: UITableViewDataSource {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tbl.frame.size.width, height: 50))
         view.backgroundColor = UIColor(red: 255/255, green: 213/255, blue: 128/255, alpha: 1)
         let titleLabel = UILabel(frame: view.frame)
-        titleLabel.textColor = .white
+        titleLabel.textColor = .black
         titleLabel.textAlignment = .center
         if(headers[section].contains("Description")){
             titleLabel.text = recipe?.name

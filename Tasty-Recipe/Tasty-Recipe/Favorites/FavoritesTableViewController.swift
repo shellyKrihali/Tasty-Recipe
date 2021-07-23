@@ -20,19 +20,25 @@ class FavoritesTableViewController: UITableViewController {
 
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
-       
         self.clearsSelectionOnViewWillAppear = true
         
     }
     override func viewDidAppear(_ animated: Bool) {
     manager.loadFavorites() { favoritesArray in
             self.recipes = favoritesArray
+        print("PPPP")
+        print(self.recipes)
         if(self.recipes.count != 0){
             self.backgroundView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         }
             self.tableView.reloadData()
             
         }
+    }
+    
+    @IBAction func refreshTableTapped(_ sender: Any) {
+        viewDidLoad()
+        tableView.reloadData()
     }
     func openRecipe(index: Int){
         UserDefaults.standard.set(self.recipes[index].name, forKey: "name")

@@ -15,5 +15,5 @@ struct Constants{
         static let tapbar = "TapBarVC"
         
     }
-    static let categories = ["APPETIZER","BREAKFAST & LUNCH", "DESSERT", "BEVREGES", "MAIN DISH", "PASTA","SALAD", "SOUP"]
+    static let categories = ["APPETIZER","MAIN DISH", "DESSERT", "PASTA", "SOUP"]
 }

@@ -13,7 +13,6 @@ class RecipeDescriptionCell: UITableViewCell {
     var currentRecipe = Recipe()
     let manager = Manager()
 
-    @IBOutlet weak var recipeNameDes: UILabel!
     
     @IBOutlet weak var recipeImageDes: UIImageView!
     
@@ -29,11 +28,12 @@ class RecipeDescriptionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         heartButton.imageEdgeInsets = UIEdgeInsets(top: 30,left: 30,bottom: 30,right: 30)
-        heartButton.frame = CGRect(x: 0, y:0, width: 50, height: 50)
-        heartButton.addTarget(self, action: #selector(handleMarkAsFavorite), for: .touchUpInside)
+        heartButton.frame = CGRect(x: 0, y:0, width: 30, height: 30)
+        
         
     }
-    @objc private func handleMarkAsFavorite(){
+    
+    @IBAction func handleMarkAsFavorite(_ sender: Any) {
         manager.loadFavoriteStatus(recipe: currentRecipe){ flag in
             self.manager.loadRecipeToFavorites(recipe: self.currentRecipe)
             if(!flag){
@@ -50,12 +50,11 @@ class RecipeDescriptionCell: UITableViewCell {
                 self.reloadInputViews()
             }
         }
-            
     }
+   
     func setUpCell(_ recipe:Recipe){
         currentRecipe = recipe
         loadImage(recipe: recipe)
-        self.recipeNameDes.text = recipe.name
         self.recipeLevelOfCookingDes.text = recipe.levelOfCooking
         self.recipeServingDes.text = String(recipe.serving!) + " People"
         self.recipeTimetoCookDes.text = String(recipe.timeInMinutes!) + " min"

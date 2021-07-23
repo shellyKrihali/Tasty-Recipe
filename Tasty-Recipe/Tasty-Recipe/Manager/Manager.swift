@@ -37,13 +37,11 @@ class Manager{
             }
         }
       
-        print(flag)
         
         
     }
     func loadFavorites(_ callback:@escaping (([Recipe]) -> Void)){
         let id = UserDefaults.standard.string(forKey: "id")!
-        print(id)
         var favoritesArray = [Recipe]()
         favoritesArray = []
         Firestore.firestore().collection("users").document(id).getDocument(){
@@ -51,18 +49,22 @@ class Manager{
             let array : [String] = snapshot!.get("favorites") as! [String]
             for item in array{
                 let document = Firestore.firestore().collection("recipes").document(item).getDocument{document,error in
-                    
-                let name = document?.get("name") as! String
-                let levelOfCooking = document?.get("levelOfCooking") as! String
-                let category = document?.get("category") as! String
-                let timeInMinutes = document?.get("timeInMinutes") as! Int
-                let ingredients = document?.get("ingredients") as! String
-                let image = document?.get("image") as! String
-                let instructions = document?.get("instructions") as! String
-                let serving = document?.get("serving") as! Int
-                let recipeId = document?.get("id") as! String
-                let recipe = Recipe(name: name,id: recipeId ,levelOfCooking: levelOfCooking, category: category, timeInMinutes: timeInMinutes, ingredients: ingredients, image: image, instructions: instructions, serving: serving)
-                favoritesArray.append(recipe)
+                    if(document == nil){
+                        
+                    }else{
+                        let name = document?.get("name") as! String
+                        let levelOfCooking = document?.get("levelOfCooking") as! String
+                        let category = document?.get("category") as! String
+                        let timeInMinutes = document?.get("timeInMinutes") as! Int
+                        let ingredients = document?.get("ingredients") as! String
+                        let image = document?.get("image") as! String
+                        let instructions = document?.get("instructions") as! String
+                        let serving = document?.get("serving") as! Int
+                        let recipeId = document?.get("id") as! String
+                        let recipe = Recipe(name: name,id: recipeId ,levelOfCooking: levelOfCooking, category: category, timeInMinutes: timeInMinutes, ingredients: ingredients, image: image, instructions: instructions, serving: serving)
+                        favoritesArray.append(recipe)
+                    }
+
                     RunLoop.main.perform{
                         callback(favoritesArray)
                     }
