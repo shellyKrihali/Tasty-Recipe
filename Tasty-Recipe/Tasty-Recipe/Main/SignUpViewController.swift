@@ -8,22 +8,17 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
-class SignUpViewController: UIViewController,UITextFieldDelegate {
-
-    
+class SignUpViewController: UIViewController,UITextFieldDelegate {    
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
-    @IBOutlet weak var nameTextField: CustomTextField!
     
+    @IBOutlet weak var nameTextField: CustomTextField!
     
     @IBOutlet weak var emailTextField: CustomTextField!
     
     @IBOutlet weak var passwordTextField: CustomTextField!
-    
-    
-    
+
     @IBOutlet weak var signUpButton: CustomButton!
-    
     
     @IBOutlet weak var errorLabel: CustomLabel!
     
@@ -33,10 +28,12 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         errorLabel.alpha = 0
         passwordTextField.isSecureTextEntry = true
     }
+    
     //pops current view controller
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
     //hides the status bar
     override var prefersStatusBarHidden: Bool {
         return true
@@ -48,23 +45,19 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
             return "Please fill in all fields"
         }
         return nil
-        
     }
     @IBAction func signUpTapped(_ sender: Any) {
-        
         //validate the fields
         let error = validateFields()
-        
         if (error != nil){
-           showError(error!)
-            
-        }else {            
+            showError(error!)
+        }else {
             //validate the fields without white spaces
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            // create the user
+            // create user
             Auth.auth().createUser(withEmail: email, password: password) { result, err in
                 //check for errors
                 if (err != nil) {
@@ -80,9 +73,9 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
                 }
             }
         }
-        
-        
     }
+    
+    // go to main tabbar
     func transitionToTabBar(){
         let tapbarController = storyboard?.instantiateViewController(identifier: Constants.Stroyboard.tapbar)
         view.window?.rootViewController = tapbarController
@@ -91,11 +84,12 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     func showError(_ message:String) {
         errorLabel.text = message
         errorLabel.alpha = 1
-        
     }
     
 }
 extension SignUpViewController {
+    
+    // wile typing, put view up
     func textFieldDidBeginEditing(_ textField: UITextField) {
         navigationController?.navigationBar.isHidden = true
         topConstraint.constant = CGFloat(10)
@@ -103,13 +97,16 @@ extension SignUpViewController {
     func textFieldDidEndEditing(_ textField: UITextField) {
         topConstraint.constant = CGFloat(100)
     }
-   
+    
+    // after enter return view to normal
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         navigationController?.navigationBar.isHidden = false
         self.switchBasedNextTextField(textField)
         topConstraint.constant = CGFloat(100)
         return true
     }
+
+    // handle enter tapped
     private func switchBasedNextTextField(_ textField: UITextField) {
         switch textField {
         case self.nameTextField:

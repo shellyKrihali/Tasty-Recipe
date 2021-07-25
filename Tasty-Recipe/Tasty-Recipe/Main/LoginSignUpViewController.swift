@@ -18,16 +18,13 @@ class LoginSignUpViewController: UIViewController {
     
     @IBOutlet weak var TastyLabel: CustomLabel!
     
-    
     //first loading func
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpProperties()
-      
     }
 
     func setUpProperties(){
-        
         signupButton.makeCustomWhiteButton()
         TastyLabel.setSpacing(space: 1.75)
     }
@@ -35,8 +32,4 @@ class LoginSignUpViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
-
-    
-
 }

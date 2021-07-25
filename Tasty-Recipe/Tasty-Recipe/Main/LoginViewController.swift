@@ -31,6 +31,7 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
     
     func setUpProperties(){
         navigationController?.navigationBar.layer.frame.origin.y = 22
+        // hide error label
         errorLabel.alpha = 0
         paasswordTextField.isSecureTextEntry = true
     }
@@ -45,10 +46,10 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         return true
     }
     
+    // login button tapped
     @IBAction func LoginButtonTapped(_ sender: Any) {
         // validate text fields
         let error = validateFields()
-        
         if (error != nil){
             showError(error!)
         }
@@ -59,13 +60,13 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if (error != nil){
                 self.showError(error!.localizedDescription)
-                
             }else {
                 self.transitionToTabBar()
                 UserDefaults.standard.setValue(result!.user.uid, forKey: "id")
             }
         }
     }
+    // go to main tabbar
     func transitionToTabBar(){
         let tapbarController = storyboard?.instantiateViewController(identifier: Constants.Stroyboard.tapbar)
         view.window?.rootViewController = tapbarController
@@ -82,9 +83,9 @@ class LoginViewController: UIViewController , UITextFieldDelegate{
             return "Please fill in all fields"
         }
         return nil
-        
     }}
- // textfield slides up
+
+// textfield slides up
 extension LoginViewController {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         topConstraint.constant = CGFloat(40)
@@ -94,6 +95,7 @@ extension LoginViewController {
         topConstraint.constant = CGFloat(101)
     }
     
+    // handle enter tapped
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         navigationController?.navigationBar.isHidden = false
         switch textField {
@@ -105,6 +107,5 @@ extension LoginViewController {
         textField.resignFirstResponder()
         return true
     }
-    
 }
 

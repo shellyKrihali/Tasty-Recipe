@@ -20,27 +20,15 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ym9-d4-Zpj" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="22" width="334" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42d-Bt-bf1" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="144" width="334" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="serving for" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOE-z6-a1w" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="335" width="334" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="instrucions" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROU-4a-cno" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="204" width="334" height="34"/>
+                                    <rect key="frame" x="40" y="22" width="334" height="42"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="42" id="ga0-ZK-6cc"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="time in minutes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3P-qd-SIT" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="401" width="334" height="34"/>
+                                    <rect key="frame" x="230" y="433" width="144" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -53,8 +41,11 @@
                                     </constraints>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0F-Ug-93q" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="670" width="334" height="30"/>
+                                    <rect key="frame" x="40" y="670" width="334" height="40"/>
                                     <color key="backgroundColor" red="1" green="0.73038712510000003" blue="0.1989487512" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="xXD-90-eX2"/>
+                                    </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="CREATE NEW RECIPE"/>
                                     <connections>
@@ -77,9 +68,8 @@
                                     <color key="textColor" systemColor="systemRedColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-Jy-xaY">
-                                    <rect key="frame" x="8" y="86" width="398" height="32"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-Jy-xaY">
+                                    <rect key="frame" x="8" y="95" width="398" height="32"/>
                                     <segments>
                                         <segment title="APPETIZER"/>
                                         <segment title="MAIN DISH"/>
@@ -89,13 +79,13 @@
                                     </segments>
                                 </segmentedControl>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of Cooking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV5-b1-NYo">
-                                    <rect key="frame" x="40" y="269" width="132" height="21"/>
+                                    <rect key="frame" x="40" y="367" width="132" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CnL-E9-Jce">
-                                    <rect key="frame" x="191" y="263" width="206" height="32"/>
+                                    <rect key="frame" x="184" y="362" width="206" height="32"/>
                                     <segments>
                                         <segment title="EASY"/>
                                         <segment title="MIDDLE"/>
@@ -105,48 +95,84 @@
                                         <action selector="segmentedSectionTapped:" destination="YkX-ic-10U" eventType="valueChanged" id="FUP-uu-iVI"/>
                                     </connections>
                                 </segmentedControl>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ingredients" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2EN-Wl-k8q">
+                                    <rect key="frame" x="40" y="152" width="334" height="80"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="5zD-mN-beJ"/>
+                                    </constraints>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="YkX-ic-10U" id="jcI-Cv-NSh"/>
+                                    </connections>
+                                </textView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Instructions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hl1-vN-RwT">
+                                    <rect key="frame" x="40" y="258" width="334" height="80"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="mMr-o5-GIP"/>
+                                    </constraints>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="YkX-ic-10U" id="Nzb-FM-6EZ"/>
+                                    </connections>
+                                </textView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="servers" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOE-z6-a1w" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="431" width="144" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="9ga-8U-1nf"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="42d-Bt-bf1" firstAttribute="top" secondItem="ym9-d4-Zpj" secondAttribute="bottom" constant="88" id="15w-Ee-AkK"/>
-                                <constraint firstItem="CnL-E9-Jce" firstAttribute="leading" secondItem="HV5-b1-NYo" secondAttribute="trailing" constant="19" id="5U2-xm-0aZ"/>
-                                <constraint firstItem="42d-Bt-bf1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="5Yc-kT-sXj"/>
-                                <constraint firstItem="HV5-b1-NYo" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="31" id="5zu-nf-7mn"/>
+                                <constraint firstAttribute="trailing" secondItem="CnL-E9-Jce" secondAttribute="trailing" constant="24" id="46R-Vr-myC"/>
+                                <constraint firstAttribute="trailing" secondItem="2EN-Wl-k8q" secondAttribute="trailing" constant="40" id="5Kg-PO-0Nt"/>
+                                <constraint firstItem="CnL-E9-Jce" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HV5-b1-NYo" secondAttribute="trailing" constant="8" symbolic="YES" id="5U2-xm-0aZ"/>
                                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="287" id="6Hx-MS-alY"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="7fG-QN-jXU"/>
-                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ROU-4a-cno" secondAttribute="trailing" constant="40" id="CqK-mE-boF"/>
-                                <constraint firstItem="CnL-E9-Jce" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="25" id="FGp-vK-wD7"/>
+                                <constraint firstItem="ym9-d4-Zpj" firstAttribute="top" secondItem="Ies-LN-NMw" secondAttribute="top" constant="22" id="A0P-cW-e8Y"/>
+                                <constraint firstItem="6Aj-Jb-8cA" firstAttribute="top" secondItem="WOE-z6-a1w" secondAttribute="bottom" constant="29" id="Jeb-Aq-zTe"/>
+                                <constraint firstItem="CnL-E9-Jce" firstAttribute="top" secondItem="hl1-vN-RwT" secondAttribute="bottom" constant="24" id="Jq4-vO-sIZ"/>
+                                <constraint firstItem="hl1-vN-RwT" firstAttribute="top" secondItem="2EN-Wl-k8q" secondAttribute="bottom" constant="26" id="MaX-wr-VhH"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="trailing" constant="40" id="NWC-tG-kN0"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="g0F-Ug-93q" secondAttribute="trailing" constant="40" id="OAP-rr-VHN"/>
+                                <constraint firstItem="HV5-b1-NYo" firstAttribute="top" secondItem="hl1-vN-RwT" secondAttribute="bottom" constant="29" id="OSm-0R-uU5"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="OV9-JG-HQg"/>
-                                <constraint firstItem="G3P-qd-SIT" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="PTg-fT-NTx"/>
+                                <constraint firstAttribute="trailing" secondItem="G3P-qd-SIT" secondAttribute="trailing" constant="40" id="Rrz-zl-FJ5"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="SuY-QU-ZKh"/>
-                                <constraint firstItem="G3P-qd-SIT" firstAttribute="top" relation="lessThanOrEqual" secondItem="WOE-z6-a1w" secondAttribute="bottom" constant="32" id="TES-uB-OoU"/>
                                 <constraint firstItem="ym9-d4-Zpj" firstAttribute="top" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="top" constant="22" id="UA3-9J-2Hf"/>
-                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="trailing" constant="40" id="VzQ-FI-vmX"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="112" id="WxG-yw-opO"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Aj-Jb-8cA" secondAttribute="bottom" constant="23.5" id="YhU-31-NeU"/>
+                                <constraint firstItem="G3P-qd-SIT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WOE-z6-a1w" secondAttribute="trailing" constant="20" id="a62-Jw-xcL"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="bQG-PZ-18A"/>
-                                <constraint firstItem="WOE-z6-a1w" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="dQv-8v-iR0"/>
+                                <constraint firstItem="WOE-z6-a1w" firstAttribute="top" secondItem="HV5-b1-NYo" secondAttribute="bottom" constant="43" id="dTG-xQ-kQ2"/>
                                 <constraint firstItem="HV5-b1-NYo" firstAttribute="leading" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="ddc-yU-y7x"/>
+                                <constraint firstItem="hl1-vN-RwT" firstAttribute="leading" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="euo-tm-hj8"/>
+                                <constraint firstItem="ZAh-Jy-xaY" firstAttribute="top" secondItem="ym9-d4-Zpj" secondAttribute="bottom" constant="31" id="f1F-yH-4RK"/>
+                                <constraint firstAttribute="trailing" secondItem="hl1-vN-RwT" secondAttribute="trailing" constant="40" id="fGW-8P-xDc"/>
+                                <constraint firstItem="WOE-z6-a1w" firstAttribute="leading" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="fUn-cd-zVZ"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="fpI-Sh-2kA"/>
-                                <constraint firstItem="ROU-4a-cno" firstAttribute="top" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="bottom" constant="26" id="fpO-tV-HRc"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="top" relation="lessThanOrEqual" secondItem="Fn9-ay-JMj" secondAttribute="bottom" constant="14" id="gNN-lB-5gg"/>
-                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="G3P-qd-SIT" secondAttribute="trailing" constant="40" id="h2h-Df-UOU"/>
                                 <constraint firstItem="fJZ-hv-BWt" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Aj-Jb-8cA" secondAttribute="bottom" constant="23.5" id="h9c-LM-7xm"/>
                                 <constraint firstItem="ym9-d4-Zpj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="ix2-US-0Fd"/>
-                                <constraint firstItem="6Aj-Jb-8cA" firstAttribute="top" relation="lessThanOrEqual" secondItem="G3P-qd-SIT" secondAttribute="bottom" constant="59" id="kKh-HQ-KnA"/>
+                                <constraint firstItem="2EN-Wl-k8q" firstAttribute="top" secondItem="ZAh-Jy-xaY" secondAttribute="bottom" constant="26" id="j4q-ql-3Yu"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6Aj-Jb-8cA" secondAttribute="trailing" constant="86.5" id="lBd-4d-qyX"/>
                                 <constraint firstItem="g0F-Ug-93q" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="m4H-be-QP8"/>
-                                <constraint firstItem="G3P-qd-SIT" firstAttribute="top" relation="lessThanOrEqual" secondItem="WOE-z6-a1w" secondAttribute="bottom" constant="32" id="nvK-hW-WS0"/>
-                                <constraint firstItem="ROU-4a-cno" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="oQW-Nf-Nr5"/>
                                 <constraint firstItem="Fn9-ay-JMj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="bottom" constant="26" id="p5O-rz-LMv"/>
                                 <constraint firstItem="6Aj-Jb-8cA" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="60" id="qOf-0j-mwX"/>
-                                <constraint firstItem="ROU-4a-cno" firstAttribute="top" secondItem="Ies-LN-NMw" secondAttribute="top" constant="204" id="qtM-H0-aAA"/>
+                                <constraint firstItem="6Aj-Jb-8cA" firstAttribute="top" secondItem="G3P-qd-SIT" secondAttribute="bottom" constant="27" id="qx6-n6-Gaf"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="fJZ-hv-BWt" secondAttribute="trailing" constant="112" id="r29-FL-qUk"/>
                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ym9-d4-Zpj" secondAttribute="trailing" constant="40" id="r6T-3V-tnZ"/>
-                                <constraint firstItem="WOE-z6-a1w" firstAttribute="top" secondItem="ROU-4a-cno" secondAttribute="bottom" constant="97" id="s0c-Y9-3nJ"/>
-                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WOE-z6-a1w" secondAttribute="trailing" constant="40" id="vbd-ME-e8L"/>
-                                <constraint firstItem="ROU-4a-cno" firstAttribute="top" relation="lessThanOrEqual" secondItem="42d-Bt-bf1" secondAttribute="bottom" constant="26" id="y9W-ls-pRi"/>
+                                <constraint firstItem="2EN-Wl-k8q" firstAttribute="leading" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="40" id="tB0-iw-LTI"/>
+                                <constraint firstItem="ZAh-Jy-xaY" firstAttribute="leading" secondItem="Ies-LN-NMw" secondAttribute="leading" constant="8" id="vSg-QJ-jlL"/>
+                                <constraint firstItem="G3P-qd-SIT" firstAttribute="top" secondItem="CnL-E9-Jce" secondAttribute="bottom" constant="40" id="w0G-3y-lzT"/>
+                                <constraint firstAttribute="trailing" secondItem="ZAh-Jy-xaY" secondAttribute="trailing" constant="8" id="xX5-s7-4Gr"/>
                             </constraints>
                         </view>
                         <connections>
@@ -158,8 +184,8 @@
                     <connections>
                         <outlet property="createNewRecipeButton" destination="g0F-Ug-93q" id="Cw4-KD-eaO"/>
                         <outlet property="errorLabel" destination="Fn9-ay-JMj" id="Sta-2R-kPP"/>
-                        <outlet property="ingredientsTextField" destination="42d-Bt-bf1" id="w9q-d3-rJP"/>
-                        <outlet property="instructionsTextField" destination="ROU-4a-cno" id="K6h-fh-CXc"/>
+                        <outlet property="ingredientsTextView" destination="2EN-Wl-k8q" id="M4M-U7-87M"/>
+                        <outlet property="instructionsTextView" destination="hl1-vN-RwT" id="7fk-PX-KyN"/>
                         <outlet property="nameTextField" destination="ym9-d4-Zpj" id="q5J-XH-MCy"/>
                         <outlet property="newImageSelect" destination="6Aj-Jb-8cA" id="MR4-2T-euu"/>
                         <outlet property="segmentedCategories" destination="ZAh-Jy-xaY" id="rbh-15-oOM"/>
@@ -196,6 +222,9 @@
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.rectangle.on.folder" catalog="system" width="128" height="96"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

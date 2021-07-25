@@ -30,9 +30,10 @@ class CategoryTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
-        
     }
+    // call out category tapped, to category detail table view
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.navigationBar.backgroundColor = .white
         UserDefaults.standard.setValue(items[indexPath.row], forKey: "categoryChoice")
     }
 }

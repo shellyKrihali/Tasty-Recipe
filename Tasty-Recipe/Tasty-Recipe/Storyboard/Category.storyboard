@@ -24,8 +24,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TvD-G0-9Jh" userLabel="ShadowView" customClass="ShadowView" customModule="Tasty_Recipe" customModuleProvider="target">
-                                            <rect key="frame" x="28" y="11" width="358" height="61"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvD-G0-9Jh" userLabel="ShadowView" customClass="ShadowView" customModule="Tasty_Recipe" customModuleProvider="target">
+                                            <rect key="frame" x="28" y="14" width="358" height="70"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbp-Gi-XwV" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="342" height="54"/>
@@ -92,7 +92,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5oD-KK-Ovf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SomeCell" id="5oD-KK-Ovf">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5oD-KK-Ovf" id="4xA-vZ-ZR4">

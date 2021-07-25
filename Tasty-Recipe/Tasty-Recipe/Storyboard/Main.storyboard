@@ -23,10 +23,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUK-Pj-7jo" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="439" width="344" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUK-Pj-7jo" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="20" y="461" width="374" height="62"/>
                                 <color key="backgroundColor" red="1" green="0.59460764705523506" blue="0.075499672957951458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Z7z-m5-qjN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,16 +37,18 @@
                                     <segue destination="Koy-vz-kYF" kind="show" identifier="" id="S3S-Ba-b83"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln2-lT-qOC" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln2-lT-qOC" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="518" width="414" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2p-3B-as4" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
-                                <rect key="frame" x="35" y="566" width="344" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2p-3B-as4" customClass="CustomButton" customModule="Tasty_Recipe" customModuleProvider="target">
+                                <rect key="frame" x="20" y="573" width="374" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="wVG-IK-ZUk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="1" green="0.8084375291" blue="0.33766198190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,13 +57,27 @@
                                     <segue destination="hGe-zX-FGb" kind="show" id="LH9-Gj-CWn"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tastyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6Cr-dn-tea">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tastyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="6Cr-dn-tea">
                                 <rect key="frame" x="59" y="157" width="283" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="cgo-R0-QNo"/>
+                                    <constraint firstAttribute="height" constant="254" id="f2k-nX-MIh"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tvt-nz-UhY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Cr-dn-tea" firstAttribute="top" secondItem="Tvt-nz-UhY" secondAttribute="top" constant="69" id="1XK-ak-1hg"/>
+                            <constraint firstItem="L2p-3B-as4" firstAttribute="top" secondItem="kUK-Pj-7jo" secondAttribute="bottom" constant="50" id="1xh-d4-wpI"/>
+                            <constraint firstItem="Tvt-nz-UhY" firstAttribute="trailing" secondItem="6Cr-dn-tea" secondAttribute="trailing" constant="72" id="2Hy-ni-ZSi"/>
+                            <constraint firstItem="6Cr-dn-tea" firstAttribute="leading" secondItem="Tvt-nz-UhY" secondAttribute="leading" constant="59" id="73j-lw-LAB"/>
+                            <constraint firstItem="kUK-Pj-7jo" firstAttribute="top" secondItem="6Cr-dn-tea" secondAttribute="bottom" constant="50" id="85s-vz-hSA"/>
+                            <constraint firstItem="kUK-Pj-7jo" firstAttribute="leading" secondItem="Tvt-nz-UhY" secondAttribute="leading" constant="20" id="8ZC-Le-f8U"/>
+                            <constraint firstItem="L2p-3B-as4" firstAttribute="leading" secondItem="Tvt-nz-UhY" secondAttribute="leading" constant="20" id="BuK-ej-EJB"/>
+                            <constraint firstItem="Tvt-nz-UhY" firstAttribute="trailing" secondItem="kUK-Pj-7jo" secondAttribute="trailing" constant="20" id="Jgw-6v-ia2"/>
+                            <constraint firstItem="Tvt-nz-UhY" firstAttribute="trailing" secondItem="L2p-3B-as4" secondAttribute="trailing" constant="20" id="ou6-NS-NJV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LRD-tU-vl1"/>
                     <connections>
@@ -91,15 +109,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="335-29-3SH" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="443" width="358" height="27"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="27" id="VoT-eh-LcI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9t-Dr-oxe" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
@@ -146,6 +155,15 @@
                                             <outlet property="delegate" destination="Koy-vz-kYF" id="PLj-yM-4U0"/>
                                         </connections>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="335-29-3SH" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="443" width="358" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="VoT-eh-LcI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -208,7 +226,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-Qp-yRY">
-                                <rect key="frame" x="16" y="188" width="382" height="551"/>
+                                <rect key="frame" x="16" y="188" width="382" height="594"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-nI-uIk" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -250,15 +268,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57v-vx-qBr" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="542" width="382" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="LyT-3E-vrd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
-                                        <color key="highlightedColor" systemColor="systemRedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uH6-qS-y7P" customClass="CustomTextField" customModule="Tasty_Recipe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="351" width="382" height="62"/>
                                         <constraints>
@@ -283,9 +292,19 @@
                                             <action selector="signUpTapped:" destination="hGe-zX-FGb" eventType="touchUpInside" id="Uln-Mw-Owg"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57v-vx-qBr" customClass="CustomLabel" customModule="Tasty_Recipe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="422" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="LyT-3E-vrd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <color key="highlightedColor" systemColor="systemRedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="57v-vx-qBr" firstAttribute="top" secondItem="uH6-qS-y7P" secondAttribute="bottom" constant="9" id="0rl-sq-IY8"/>
                                     <constraint firstItem="Sqd-nI-uIk" firstAttribute="top" secondItem="kaq-Qp-yRY" secondAttribute="top" id="239-4R-u8w"/>
                                     <constraint firstItem="vOI-D0-1nR" firstAttribute="top" secondItem="B90-6D-w8l" secondAttribute="bottom" constant="61" id="48L-Hf-8uK"/>
                                     <constraint firstItem="YCb-hd-QF8" firstAttribute="leading" secondItem="kaq-Qp-yRY" secondAttribute="leading" id="5K9-4a-qao"/>
@@ -295,13 +314,13 @@
                                     <constraint firstItem="B90-6D-w8l" firstAttribute="leading" secondItem="kaq-Qp-yRY" secondAttribute="leading" constant="16" id="Bg6-Zo-RKi"/>
                                     <constraint firstItem="57v-vx-qBr" firstAttribute="leading" secondItem="kaq-Qp-yRY" secondAttribute="leading" id="BzD-GL-MEo"/>
                                     <constraint firstAttribute="trailing" secondItem="uH6-qS-y7P" secondAttribute="trailing" id="Hfo-Zz-htc"/>
+                                    <constraint firstItem="CZ9-51-rbA" firstAttribute="top" secondItem="57v-vx-qBr" secondAttribute="bottom" constant="8" symbolic="YES" id="MsL-y4-l2R"/>
                                     <constraint firstItem="uH6-qS-y7P" firstAttribute="leading" secondItem="kaq-Qp-yRY" secondAttribute="leading" id="OF4-rx-zqC"/>
                                     <constraint firstAttribute="trailing" secondItem="Sqd-nI-uIk" secondAttribute="trailing" id="VVR-uA-0Ol"/>
                                     <constraint firstAttribute="trailing" secondItem="B90-6D-w8l" secondAttribute="trailing" constant="16" id="W6I-G9-PsY"/>
                                     <constraint firstAttribute="trailing" secondItem="YCb-hd-QF8" secondAttribute="trailing" id="WvL-YP-4pm"/>
                                     <constraint firstItem="CZ9-51-rbA" firstAttribute="top" secondItem="uH6-qS-y7P" secondAttribute="bottom" constant="57" id="YoV-j8-7uq"/>
                                     <constraint firstItem="uH6-qS-y7P" firstAttribute="top" secondItem="YCb-hd-QF8" secondAttribute="bottom" constant="38" id="eCE-MW-Amy"/>
-                                    <constraint firstItem="57v-vx-qBr" firstAttribute="top" secondItem="CZ9-51-rbA" secondAttribute="bottom" constant="10" id="fBH-9P-HPH"/>
                                     <constraint firstItem="CZ9-51-rbA" firstAttribute="leading" secondItem="kaq-Qp-yRY" secondAttribute="leading" id="iWB-aC-ELv"/>
                                     <constraint firstItem="vOI-D0-1nR" firstAttribute="leading" secondItem="kaq-Qp-yRY" secondAttribute="leading" id="nwC-Is-iie"/>
                                     <constraint firstAttribute="trailing" secondItem="57v-vx-qBr" secondAttribute="trailing" id="rBa-g5-TRo"/>
@@ -314,7 +333,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kaq-Qp-yRY" firstAttribute="leading" secondItem="ZO0-JP-6sm" secondAttribute="leading" constant="16" id="Iam-3P-Rcq"/>
-                            <constraint firstItem="ZO0-JP-6sm" firstAttribute="bottom" secondItem="kaq-Qp-yRY" secondAttribute="bottom" constant="123" id="gUy-Gp-Ckj"/>
+                            <constraint firstItem="ZO0-JP-6sm" firstAttribute="bottom" secondItem="kaq-Qp-yRY" secondAttribute="bottom" constant="80" id="gUy-Gp-Ckj"/>
                             <constraint firstItem="kaq-Qp-yRY" firstAttribute="top" secondItem="ZO0-JP-6sm" secondAttribute="top" constant="100" id="nRW-1O-fzk"/>
                             <constraint firstItem="ZO0-JP-6sm" firstAttribute="trailing" secondItem="kaq-Qp-yRY" secondAttribute="trailing" constant="16" id="r29-do-6Ss"/>
                         </constraints>

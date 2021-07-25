@@ -8,7 +8,7 @@
 import UIKit
 
 class RecipeCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var recipeNameLabel: UILabel!
     
@@ -24,18 +24,19 @@ class RecipeCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
     func setUpCell(recipe: Recipe){
         loadImage(recipe: recipe)
         recipeNameLabel.text! = recipe.name!
         servingLabel.text! = String(recipe.serving!) + " people"
         timetocookLabel.text! = String(recipe.timeInMinutes!) + " min"
         levelOfCookingLabel.text! = recipe.levelOfCooking!
-        
     }
+    //show imageUI after converting the url image
     func loadImage(recipe: Recipe){
         var downloadedImage = UIImage()
         guard let imageString = recipe.image else{return}
@@ -49,5 +50,5 @@ class RecipeCell: UITableViewCell {
             }
         }
     }
-
+    
 }

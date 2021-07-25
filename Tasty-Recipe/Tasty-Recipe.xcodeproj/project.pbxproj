@@ -23,6 +23,7 @@
 		8334390C269C21AF00E6F718 /* AppIconSerice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334390B269C21AF00E6F718 /* AppIconSerice.swift */; };
 		8334390F269C2D6A00E6F718 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8334390D269C2D6A00E6F718 /* CategoryCell.swift */; };
 		83343910269C2D6A00E6F718 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8334390E269C2D6A00E6F718 /* CategoryCell.xib */; };
+		833E841F26AD8422006DFEC5 /* SetUpTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E841E26AD8422006DFEC5 /* SetUpTextView.swift */; };
 		834B43DC268B34C50080B4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43DB268B34C50080B4A7 /* AppDelegate.swift */; };
 		834B43DE268B34C50080B4A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B43DD268B34C50080B4A7 /* SceneDelegate.swift */; };
 		834B43E8268B34C60080B4A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834B43E6268B34C60080B4A7 /* LaunchScreen.storyboard */; };
@@ -76,6 +77,7 @@
 		8334390B269C21AF00E6F718 /* AppIconSerice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSerice.swift; sourceTree = "<group>"; };
 		8334390D269C2D6A00E6F718 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		8334390E269C2D6A00E6F718 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		833E841E26AD8422006DFEC5 /* SetUpTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpTextView.swift; sourceTree = "<group>"; };
 		834B43D8268B34C50080B4A7 /* Tasty-Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tasty-Recipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		834B43DB268B34C50080B4A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834B43DD268B34C50080B4A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				83CFBB5626910DA0002558B4 /* Constans.swift */,
+				833E841E26AD8422006DFEC5 /* SetUpTextView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				830F7157269484B200D84D67 /* RecipeInstructionsCell.swift in Sources */,
 				834B43F4268B44560080B4A7 /* LoginSignUpViewController.swift in Sources */,
 				832A83DC2691AF5400904C09 /* Recipe.swift in Sources */,
+				833E841F26AD8422006DFEC5 /* SetUpTextView.swift in Sources */,
 				83688E4C2695E93A0054D543 /* Manager.swift in Sources */,
 				834B43F8268B5A2D0080B4A7 /* CustomLabel.swift in Sources */,
 				834B43DC268B34C50080B4A7 /* AppDelegate.swift in Sources */,
