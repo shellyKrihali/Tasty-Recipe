@@ -2,7 +2,7 @@
 Tasty App is an app for exchanging recipes and sharing recipes between cooks.
 The application was build as part of a final project for IOS course. The application is written in Swift (using storyboard), and uses FireStore and Storage for real time database.
 
-In this app you can upload, and watch all recipes and serch them by category and name.
+In this app you can upload, and watch all recipes and search for them by category and name.
 Also, you can add you favorite recipe in your recipes favorites.
  
  ## ScreenShots
